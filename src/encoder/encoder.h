@@ -16,6 +16,8 @@ public:
 protected:
     void encode_symmetry_breaking(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data)
     {
+        gurobi_data.init_label(config_data, graph_data);
+
         std::vector<int> degree(graph_data.num_vertices + 1, 0);
         for (const auto &edge : graph_data.edges)
         {

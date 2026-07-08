@@ -69,9 +69,9 @@ int main(int argc, char *argv[])
     {
         if (gurobi_data.model->get(GRB_IntAttr_SolCount) > 0)
         {
-            std::vector<int> solution(graph_data.num_vertices);
+            std::vector<int> solution(graph_data.num_vertices + 1);
 
-            for (int v = 0; v < graph_data.num_vertices; v++)
+            for (int v = 1; v <= graph_data.num_vertices; v++)
                 solution[v] = static_cast<int>(gurobi_data.label[v].get(GRB_DoubleAttr_X));
 
             int solution_span = static_cast<int>(gurobi_data.span.get(GRB_DoubleAttr_X));
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
                 std::cout << "! Best span = " << solution_span << "\n";
                 std::cout << "! Labeling: ";
 
-                for (int v = 0; v < graph_data.num_vertices; v++)
+                for (int v = 1; v <= graph_data.num_vertices; v++)
                     std::cout << solution[v] << " ";
 
                 std::cout << "\n";
