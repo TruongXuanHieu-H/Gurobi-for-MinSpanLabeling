@@ -7,6 +7,9 @@ class NoHoleEncoder : public Encoder
 {
 public:
     GRBModel encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data) override;
+
+private:
+    void encode_no_hole(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data);
 };
 
 #endif
