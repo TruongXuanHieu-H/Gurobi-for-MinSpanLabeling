@@ -20,7 +20,7 @@ public:
         env = std::make_unique<GRBEnv>(true);
         env->start();
 
-        model = std::make_unique<GRBModel>(env);
+        model = std::make_unique<GRBModel>(env.get());
 
         for (int i = 0; i < graph_data.num_vertices; i++)
         {
