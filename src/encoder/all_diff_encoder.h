@@ -1,0 +1,12 @@
+#ifndef ALL_DIFF_ENCODER_H
+#define ALL_DIFF_ENCODER_H
+
+#include "encoder.h"
+
+class AllDiffEncoder : public Encoder
+{
+public:
+    GRBModel encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data) override;
+};
+
+#endif
