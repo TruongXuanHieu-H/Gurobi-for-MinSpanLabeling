@@ -1,6 +1,6 @@
 #include "no_hole_encoder.h"
 
-GRBModel NoHoleEncoder::encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data)
+void NoHoleEncoder::encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data)
 {
     encode_symmetry_breaking(config_data, graph_data, gurobi_data);
 
@@ -12,8 +12,6 @@ GRBModel NoHoleEncoder::encode_model(ConfigData &config_data, GraphData &graph_d
     encode_no_hole(config_data, graph_data, gurobi_data);
 
     gurobi_data.model->setObjective(GRBLinExpr(gurobi_data.span), GRB_MINIMIZE);
-
-    return *gurobi_data.model;
 }
 
 void NoHoleEncoder::encode_no_hole(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data)
