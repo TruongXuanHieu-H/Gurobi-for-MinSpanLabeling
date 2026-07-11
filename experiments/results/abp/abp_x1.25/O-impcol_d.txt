@@ -1,0 +1,97 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/O-impcol_d.mtx.rnd
+! Target value is set to 150
+! Lower bound is set to 151
+! Upper bound is set to 532
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 2960 rows, 2960 columns and 5919 nonzeros (Min)
+Model fingerprint: 0x0176cd46
+Model has 1 linear objective coefficients
+Model has 1267 simple general constraints
+  1267 ABS
+Variable types: 0 continuous, 2960 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+02]
+  RHS range        [2e+02, 3e+02]
+
+Presolve added 0 rows and 1267 columns
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.02s
+Presolved: 2959 rows, 4227 columns, 9719 nonzeros
+Presolved model has 1267 SOS constraint(s)
+Variable types: 0 continuous, 4227 integer (0 binary)
+
+Root relaxation: objective 1.510000e+02, 1198 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  151.00000    0  921          -  151.00000      -     -    0s
+     0     0  151.00000    0  921          -  151.00000      -     -    0s
+     0     2  151.00000    0  921          -  151.00000      -     -    0s
+ 22738 14225  451.00000   79  806          -  301.00000      -   4.1    5s
+ 46450 29351 infeasible   51               -  301.00000      -   3.9   10s
+ 72572 46303  451.00000  151  693          -  301.00000      -   3.8   15s
+ 87120 55921  451.00000   47  847          -  301.00000      -   3.8   20s
+ 116052 74520  451.00000   70  830          -  301.00000      -   3.7   25s
+ 145138 93720  451.00000  232  486          -  301.00000      -   3.7   30s
+ 172337 111579  451.00000  291  384          -  301.00000      -   3.7   35s
+ 200952 130434 infeasible  179               -  301.00000      -   3.7   40s
+ 226258 147696 infeasible  259               -  301.00000      -   3.6   45s
+ 251041 164667  451.00000  203  512          -  301.00000      -   3.6   50s
+ 277908 182153  451.00000   79  764          -  301.00000      -   3.6   55s
+ 295434 194198  451.00000  247  286          -  301.00000      -   3.6   60s
+ 323371 212924  451.00000   82  780          -  301.00000      -   3.5   65s
+ 352055 232165  451.00000  128  633          -  301.00000      -   3.5   70s
+ 381143 251865  451.00000   58  856          -  301.00000      -   3.5   75s
+ 409290 270226 infeasible  205               -  301.00000      -   3.5   80s
+ 428411 283463  451.00000  132  661          -  301.00000      -   3.5   85s
+ 457186 302699  451.00000   89  768          -  301.00000      -   3.5   90s
+ 486472 322249 infeasible   85               -  301.00000      -   3.5   95s
+ 515556 341170  451.00000   80  764          -  301.00000      -   3.4  100s
+ 530662 351956 infeasible  257               -  301.00000      -   3.4  105s
+ 559086 370642 infeasible  230               -  301.00000      -   3.4  110s
+ 587532 389290  451.00000  272  309          -  301.00000      -   3.4  115s
+ 616589 408497  451.00000  191  436          -  301.00000      -   3.4  120s
+ 646251 428291 infeasible  162               -  301.00000      -   3.4  125s
+ 670424 447393  451.00000  137  634          -  301.00000      -   3.4  131s
+ 696389 461752  451.00000  154  637          -  301.00000      -   3.4  135s
+ 725060 480711  451.00000  252  309          -  301.00000      -   3.4  140s
+ 755233 500616  451.00000  163  649          -  301.00000      -   3.4  145s
+ 777857 515713  451.00000  129  625          -  301.00000      -   3.4  150s
+ 805205 533605 infeasible  344               -  301.00000      -   3.4  155s
+ 835794 553842  451.00000  129  665          -  301.00000      -   3.4  160s
+ 852589 564780  451.00000  227  340          -  301.00000      -   3.4  165s
+ 880260 582594  451.00000  101  712          -  301.00000      -   3.3  170s
+*907305  5306             480     451.0000000  301.00000  33.3%   3.3  175s
+ 923750  3506 infeasible   66       451.00000  301.00000  33.3%   3.3  180s
+ 955756   956  301.00000   44  857  451.00000  301.00000  33.3%   3.3  185s
+
+Explored 973377 nodes (3138510 simplex iterations) in 187.53 seconds (167.11 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 451 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.510000000000e+02, best bound 4.510000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 451
+! Labeling: 301 451 301 1 151 451 1 151 1 151 1 151 151 151 451 301 151 301 301 301 301 1 151 301 1 151 151 151 301 301 451 451 301 451 151 301 301 1 151 301 151 301 1 1 1 451 301 1 1 1 1 301 151 151 1 451 301 151 1 301 451 151 151 451 301 1 301 451 451 1 301 151 301 1 301 301 451 451 451 1 451 151 301 451 151 301 301 151 301 301 1 151 1 1 1 151 1 1 301 301 151 151 1 301 151 1 1 301 151 1 301 451 451 301 301 301 301 1 1 301 1 451 151 151 151 451 1 301 1 301 151 151 151 451 301 151 1 1 1 1 151 151 1 151 301 151 451 151 151 151 301 1 151 301 451 301 301 1 1 1 451 151 1 151 151 1 301 301 151 301 1 451 301 1 151 451 151 151 1 451 1 151 151 301 1 451 1 1 151 451 151 301 301 1 1 151 151 151 301 301 1 1 151 451 1 451 451 301 1 1 151 451 301 1 301 1 151 151 301 301 151 1 151 151 301 1 1 301 451 151 151 1 301 301 301 1 301 151 451 1 1 301 151 1 301 301 151 1 1 1 451 1 151 1 301 1 1 1 1 301 151 451 1 1 451 451 151 1 301 151 1 151 1 301 451 1 301 1 451 1 451 301 301 1 151 1 1 151 451 1 451 151 151 301 301 1 151 451 1 151 1 151 451 301 151 151 151 1 301 451 451 301 301 151 151 301 151 151 301 451 451 1 451 301 301 451 1 151 301 1 151 301 151 451 151 451 1 451 301 151 451 301 1 151 301 1 151 1 451 151 301 151 451 1 1 151 151 451 301 1 301 1 151 301 151 1 1 451 301 151 151 151 451 1 451 301 1 301 451 1 451 301 151 301 301 451 451 151 301 451 451 151 301 301 451 451 451 1 451 451 1 301 301 301 151 151 151 151 1 301 151 1 151 151 151 151 451 301 1 301 1 451 301 1 1 
+! --------------------------------------------------------

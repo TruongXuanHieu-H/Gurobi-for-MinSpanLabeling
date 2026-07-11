@@ -1,0 +1,63 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/Q-494_bus.mtx.rnd
+! Target value is set to 283
+! Lower bound is set to 284
+! Upper bound is set to 618
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 1667 rows, 1667 columns and 3333 nonzeros (Min)
+Model fingerprint: 0x01342f00
+Model has 1 linear objective coefficients
+Model has 586 simple general constraints
+  586 ABS
+Variable types: 0 continuous, 1667 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+02]
+  RHS range        [3e+02, 3e+02]
+
+Presolve added 0 rows and 586 columns
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.01s
+Presolved: 1666 rows, 2253 columns, 5090 nonzeros
+Presolved model has 586 SOS constraint(s)
+Variable types: 0 continuous, 2253 integer (0 binary)
+
+Root relaxation: objective 2.840000e+02, 568 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  284.00000    0  472          -  284.00000      -     -    0s
+     0     0  284.00000    0  472          -  284.00000      -     -    0s
+     0     0  284.00000    0  445          -  284.00000      -     -    0s
+     0     0  284.00000    0  445          -  284.00000      -     -    0s
+     0     2  284.00000    0  445          -  284.00000      -     -    0s
+H 5239  1123                     567.0000000  284.00000  49.9%   1.8    1s
+
+Explored 6174 nodes (10761 simplex iterations) in 1.12 seconds (0.93 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 567 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.670000000000e+02, best bound 5.670000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 567
+! Labeling: 567 1 284 284 567 284 1 1 284 1 567 1 284 284 1 1 284 1 1 567 284 284 567 567 284 567 284 1 1 1 567 284 567 1 284 1 1 567 1 1 1 284 1 1 284 1 284 284 284 284 1 284 284 284 1 284 1 1 284 567 284 1 567 284 1 567 284 567 284 284 567 567 567 284 567 567 284 284 1 284 284 284 1 284 567 1 1 1 284 1 284 567 1 567 284 1 284 567 1 284 567 284 1 284 567 1 567 1 567 284 1 284 284 284 1 1 567 567 1 567 284 284 284 567 567 284 1 1 284 1 284 1 284 1 284 284 284 1 1 284 284 1 1 284 567 1 284 567 567 284 1 567 284 1 284 284 1 1 1 284 567 284 567 284 1 1 1 1 284 284 1 1 284 284 567 284 284 284 567 1 284 284 284 284 567 1 284 284 284 284 567 1 1 567 1 1 567 284 284 284 567 284 567 284 284 284 1 567 284 1 1 567 284 284 567 284 284 567 567 284 567 567 1 1 284 284 284 284 284 567 284 567 284 567 284 1 1 567 1 1 284 284 284 1 284 284 1 284 567 1 284 284 567 284 1 567 567 284 567 1 284 284 567 1 1 284 284 284 567 567 1 567 1 567 1 284 1 284 567 1 1 1 1 284 284 567 1 1 284 1 567 284 284 1 1 284 284 567 284 284 567 567 1 284 567 1 284 284 284 284 567 567 284 284 284 284 1 567 1 567 567 567 284 284 284 567 284 284 284 284 567 1 284 284 1 284 284 284 1 284 284 1 284 284 1 1 284 567 567 1 1 284 567 567 1 284 567 1 284 284 1 567 284 1 284 1 567 284 284 284 284 284 284 284 284 1 1 1 1 1 1 567 567 1 1 284 284 1 1 284 284 284 567 567 1 567 284 567 284 284 567 567 567 284 284 284 284 1 284 1 284 284 284 284 284 567 567 1 284 284 1 284 284 567 567 1 1 567 284 1 567 567 1 567 567 284 1 567 284 284 1 284 284 567 1 1 1 567 1 284 567 284 284 284 284 284 284 1 284 284 284 284 284 1 1 284 284 284 567 567 284 1 567 284 567 284 1 567 284 1 284 284 284 1 284 567 1 567 1 284 284 1 284 1 
+! --------------------------------------------------------

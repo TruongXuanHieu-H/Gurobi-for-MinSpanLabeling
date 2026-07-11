@@ -1,0 +1,75 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/Q-494_bus.mtx.rnd
+! Target value is set to 227
+! Lower bound is set to 228
+! Upper bound is set to 494
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 1667 rows, 1667 columns and 3333 nonzeros (Min)
+Model fingerprint: 0x505ec24d
+Model has 1 linear objective coefficients
+Model has 586 simple general constraints
+  586 ABS
+Variable types: 0 continuous, 1667 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+02]
+  RHS range        [2e+02, 2e+02]
+
+Presolve added 918 rows and 919 columns
+Presolve time: 0.02s
+Presolved: 2585 rows, 2586 columns, 6772 nonzeros
+Variable types: 0 continuous, 2586 integer (534 binary)
+
+Root relaxation: objective 2.280000e+02, 1032 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  228.00000    0  157          -  228.00000      -     -    0s
+     0     0  228.00000    0  388          -  228.00000      -     -    0s
+     0     0  228.00000    0  374          -  228.00000      -     -    0s
+     0     0  228.00000    0  449          -  228.00000      -     -    0s
+     0     0  228.00000    0  183          -  228.00000      -     -    0s
+     0     0  228.00000    0  183          -  228.00000      -     -    0s
+     0     0  228.00000    0  144          -  228.00000      -     -    0s
+     0     2  228.00000    0  144          -  228.00000      -     -    0s
+*  778   257             147     455.0000000  228.00000  49.9%   8.2    0s
+
+Cutting planes:
+  Gomory: 128
+  Cover: 152
+  Implied bound: 700
+  MIR: 192
+  StrongCG: 57
+  Flow cover: 71
+  Inf proof: 7
+  Zero half: 63
+  Relax-and-lift: 142
+
+Explored 1153 nodes (17407 simplex iterations) in 0.84 seconds (0.69 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 455 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.550000000000e+02, best bound 4.550000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 455
+! Labeling: 1 455 228 1 228 228 228 228 228 1 1 1 228 228 1 228 455 228 228 455 1 228 1 228 1 455 1 1 228 455 1 228 1 455 228 455 228 228 455 1 1 228 1 455 455 228 1 228 228 1 1 1 455 228 228 455 1 1 228 228 1 1 228 228 228 1 1 228 1 228 1 1 228 228 1 1 228 1 1 1 228 1 228 228 455 228 228 455 228 1 1 455 228 228 228 455 228 1 455 228 228 1 1 228 1 228 228 228 1 1 455 1 455 1 455 1 455 1 228 228 455 455 1 228 228 1 228 1 455 228 1 228 455 1 228 455 228 1 455 1 455 455 455 228 228 228 1 228 228 228 455 228 1 228 1 1 1 455 228 1 228 228 228 455 228 228 455 228 228 228 1 455 1 1 228 1 228 1 1 1 228 1 455 1 228 455 1 228 228 455 1 1 455 228 455 228 1 1 228 1 1 455 1 1 1 1 1 228 1 1 455 1 228 1 455 455 455 228 228 228 455 228 228 228 228 1 228 455 228 228 455 228 1 228 228 455 455 228 228 228 228 1 455 1 1 228 1 455 1 1 455 228 228 455 228 228 228 455 455 228 228 1 455 228 228 228 228 228 1 228 228 228 1 228 228 1 228 228 228 1 455 455 228 1 228 228 228 228 228 228 455 228 228 228 455 228 1 228 228 1 455 228 228 1 228 1 228 1 228 455 455 455 455 228 228 455 228 455 1 1 1 1 228 228 1 1 228 228 228 228 1 455 455 1 1 228 228 1 228 1 228 455 1 1 228 1 228 228 1 1 1 1 455 228 1 1 228 1 1 228 1 228 228 228 1 228 1 228 1 1 228 455 455 228 1 455 228 228 455 455 1 228 1 228 228 1 228 455 228 1 228 1 455 228 1 1 1 1 1 455 1 228 1 1 228 1 1 228 228 228 455 1 1 228 228 455 455 228 1 1 1 1 1 1 228 1 455 228 1 228 228 455 1 455 1 455 228 228 455 228 455 1 1 228 455 1 228 228 228 228 228 1 228 455 455 228 228 455 228 228 1 455 228 455 1 1 228 228 455 455 228 228 455 1 228 455 228 228 228 228 1 228 455 228 1 1 228 1 1 1 228 455 228 228 
+! --------------------------------------------------------

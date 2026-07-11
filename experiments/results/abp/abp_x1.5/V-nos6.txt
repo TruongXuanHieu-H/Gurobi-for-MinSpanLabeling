@@ -1,0 +1,71 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/V-nos6.mtx.rnd
+! Target value is set to 493
+! Lower bound is set to 494
+! Upper bound is set to 1013
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 3256 rows, 3256 columns and 6511 nonzeros (Min)
+Model fingerprint: 0x5ee2d0f8
+Model has 1 linear objective coefficients
+Model has 1290 simple general constraints
+  1290 ABS
+Variable types: 0 continuous, 3256 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+03]
+  RHS range        [5e+02, 5e+02]
+
+Presolve added 2579 rows and 2580 columns
+Presolve time: 0.06s
+Presolved: 5835 rows, 5836 columns, 16830 nonzeros
+Variable types: 0 continuous, 5836 integer (1290 binary)
+Found heuristic solution: objective 1013.0000000
+Found heuristic solution: objective 1012.0000000
+
+Root relaxation: objective 4.940000e+02, 1288 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  494.00000    0  499 1012.00000  494.00000  51.2%     -    0s
+H    0     0                    1011.0000000  494.00000  51.1%     -    0s
+H    0     0                     987.0000000  494.00000  49.9%     -    0s
+H    0     0                     494.0000000  494.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 123
+  Cover: 76
+  Implied bound: 392
+  MIR: 285
+  StrongCG: 154
+  Flow cover: 83
+  Zero half: 45
+  Relax-and-lift: 134
+
+Explored 1 nodes (3146 simplex iterations) in 0.49 seconds (0.24 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 494 987 1011 ... 1013
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.940000000000e+02, best bound 4.940000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 494
+! Labeling: 1 1 1 494 1 494 494 1 1 494 494 1 494 494 494 1 494 1 494 1 1 494 1 494 1 1 494 494 1 494 1 1 494 494 494 1 494 1 1 494 1 494 1 494 1 1 494 1 1 494 1 1 1 494 494 494 494 1 494 494 1 494 494 1 1 494 494 494 494 1 1 1 1 494 494 1 1 1 494 1 1 494 494 494 1 494 494 494 494 1 1 1 494 1 494 494 1 1 1 1 494 1 1 1 1 1 1 494 1 1 1 1 1 1 1 494 1 494 494 494 494 1 494 494 1 1 1 494 494 494 1 1 1 494 1 494 494 1 1 494 494 1 1 494 494 494 1 1 494 1 494 1 494 1 494 494 1 1 1 494 494 494 494 494 1 1 494 1 1 494 494 494 1 494 494 1 1 1 1 1 1 494 494 494 1 494 494 494 1 494 494 494 494 1 494 494 494 1 1 1 494 494 494 494 1 494 494 494 494 494 494 494 494 494 494 1 1 1 494 1 1 494 494 1 1 494 494 494 1 1 1 494 494 494 494 1 494 1 494 1 1 1 1 1 494 1 1 494 494 1 494 494 1 1 1 1 1 1 1 1 494 1 494 1 494 1 1 1 1 1 494 494 494 1 494 1 1 1 494 494 1 494 494 1 494 494 494 494 494 1 1 494 1 494 1 494 494 494 494 494 1 1 494 1 494 494 494 1 494 1 1 1 494 1 1 494 494 494 494 1 494 494 494 1 1 494 1 494 1 1 1 1 494 494 1 1 1 1 494 494 1 494 1 1 1 494 1 1 494 1 494 1 1 494 494 1 1 1 1 1 494 494 1 1 1 494 1 1 494 494 1 494 494 1 1 1 1 494 1 1 1 1 494 1 1 1 1 1 494 494 1 1 1 494 494 494 494 1 1 494 494 1 1 494 1 1 494 494 494 1 494 1 1 1 494 494 1 494 1 494 494 1 1 1 494 494 1 1 494 1 1 494 1 1 494 1 1 1 1 494 1 494 494 1 1 494 1 1 494 494 1 494 494 494 1 1 1 1 1 494 1 494 494 494 494 494 494 494 494 1 494 1 1 1 1 1 1 494 494 1 494 494 1 1 1 494 1 494 494 1 1 494 494 494 1 1 1 494 1 1 494 494 1 494 494 494 494 1 494 1 494 494 494 1 1 1 1 1 494 494 1 1 494 494 1 494 1 494 494 494 1 494 494 494 494 494 494 494 1 494 494 1 1 494 494 494 494 494 1 1 494 494 1 1 1 1 1 494 1 494 1 494 1 494 1 494 494 494 1 494 494 1 494 494 1 1 1 494 494 1 1 494 1 1 494 494 1 494 1 1 1 1 1 494 1 1 494 494 494 494 1 1 1 1 494 494 494 494 494 1 1 494 494 1 1 494 494 1 1 494 494 1 494 1 1 1 494 494 494 494 1 494 494 494 1 1 494 1 494 494 494 494 494 494 1 1 494 494 494 1 494 494 494 494 1 1 494 1 1 494 494 494 1 494 494 494 1 1 494 1 494 1 1 1 1 
+! --------------------------------------------------------

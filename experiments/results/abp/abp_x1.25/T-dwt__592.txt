@@ -1,0 +1,70 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/T-dwt__592.mtx.rnd
+! Target value is set to 141
+! Lower bound is set to 142
+! Upper bound is set to 740
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 5105 rows, 5105 columns and 10209 nonzeros (Min)
+Model fingerprint: 0x1c6c7ff1
+Model has 1 linear objective coefficients
+Model has 2256 simple general constraints
+  2256 ABS
+Variable types: 0 continuous, 5105 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 7e+02]
+  RHS range        [1e+02, 4e+02]
+
+Presolve added 0 rows and 2256 columns
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.03s
+Presolved: 5104 rows, 7361 columns, 16976 nonzeros
+Presolved model has 2256 SOS constraint(s)
+Variable types: 0 continuous, 7361 integer (0 binary)
+
+Root relaxation: objective 1.420000e+02, 2236 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  142.00000    0 1851          -  142.00000      -     -    0s
+     0     0  142.00000    0 1851          -  142.00000      -     -    0s
+     0     2  142.00000    0 1851          -  142.00000      -     -    0s
+  9745  7947  706.00000  291 1170          -  142.00000      -   4.5    5s
+*19048  3988             906     706.0000000  142.00000  79.9%   4.0    8s
+ 22790  7078  565.00000  242 1274  706.00000  283.00000  59.9%   4.1   10s
+*32828  3850             903     565.0000000  283.00000  49.9%   3.9   13s
+ 37215  6099  424.00000   68 1698  565.00000  283.00000  49.9%   4.0   15s
+ 57759 14139  424.00000  107 1594  565.00000  283.00000  49.9%   3.8   20s
+ 80240 18472 infeasible  177       565.00000  283.00000  49.9%   3.3   25s
+ 104521 19103  424.00000  172 1354  565.00000  424.00000  25.0%   2.9   30s
+ 128353 19631  424.00000  307 1107  565.00000  424.00000  25.0%   2.7   35s
+*146191   473             777     424.0000000  424.00000  0.00%   2.5   38s
+
+Explored 146923 nodes (368813 simplex iterations) in 38.69 seconds (41.26 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 424 565 706 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.240000000000e+02, best bound 4.240000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 424
+! Labeling: 1 283 424 283 283 142 424 1 424 424 1 1 424 142 283 283 142 1 1 283 424 424 142 283 424 424 283 283 424 283 142 1 424 1 142 424 283 1 142 283 142 142 1 1 142 1 283 424 142 142 142 142 142 424 1 142 424 1 1 142 424 283 142 142 142 1 283 283 142 142 424 1 1 283 142 1 424 1 142 424 283 1 283 283 142 142 424 424 1 1 1 424 283 283 424 142 1 424 283 1 1 424 142 1 283 1 283 1 424 1 142 142 1 142 283 424 424 424 142 1 424 283 1 1 424 283 283 142 142 424 142 424 424 283 283 283 1 283 424 1 1 283 424 283 142 142 283 283 1 1 424 142 424 142 283 283 142 142 142 142 1 283 142 283 142 1 424 142 424 283 142 142 1 283 1 424 424 424 283 142 142 1 283 1 142 142 142 283 1 1 1 1 424 283 424 1 142 424 424 283 424 283 283 283 1 283 424 1 424 283 1 283 424 1 424 142 1 283 424 424 142 283 1 142 283 142 283 283 142 424 424 283 283 1 142 1 1 142 283 142 142 424 424 283 424 142 142 1 142 283 283 1 1 1 1 283 142 1 424 142 142 142 424 142 283 142 283 1 142 1 283 283 1 424 283 1 1 142 424 283 424 424 283 1 142 1 424 1 424 142 283 283 424 424 142 424 1 283 1 142 1 283 1 142 1 142 142 142 1 1 424 424 283 424 424 283 424 424 142 424 142 142 424 283 1 283 1 142 142 283 424 283 142 142 1 142 424 1 1 283 1 142 142 424 424 142 283 424 142 1 142 424 1 424 283 283 142 142 424 424 1 1 424 1 142 142 1 1 142 424 1 424 1 1 424 424 1 1 424 424 283 142 142 283 283 283 424 1 142 283 424 142 424 424 142 1 424 1 1 283 142 424 424 1 424 1 1 283 424 283 424 424 283 424 1 142 1 283 142 1 424 283 283 424 142 142 142 283 142 424 424 283 424 283 1 1 142 142 424 283 1 424 424 424 1 1 142 283 283 1 1 142 1 142 1 283 283 424 142 424 142 283 1 142 283 142 283 1 1 1 424 424 142 424 424 1 1 424 142 1 142 1 424 424 283 142 283 283 142 142 283 142 283 283 142 283 424 283 424 1 424 283 283 283 283 1 283 1 283 283 424 424 283 424 424 142 283 283 283 1 142 142 283 1 142 424 1 424 283 283 1 283 424 142 283 1 142 142 424 283 1 1 283 142 142 142 424 283 283 283 283 1 283 142 424 424 1 1 283 283 283 142 424 424 142 1 424 424 424 142 283 424 283 283 424 424 1 424 424 1 142 1 424 1 142 424 1 283 1 142 1 1 
+! --------------------------------------------------------

@@ -1,0 +1,69 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/E-bcspwr02.mtx.rnd
+! Target value is set to 31
+! Lower bound is set to 32
+! Upper bound is set to 74
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 168 rows, 168 columns and 335 nonzeros (Min)
+Model fingerprint: 0x346b87c1
+Model has 1 linear objective coefficients
+Model has 59 simple general constraints
+  59 ABS
+Variable types: 0 continuous, 168 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 7e+01]
+  RHS range        [3e+01, 4e+01]
+
+Presolve added 92 rows and 93 columns
+Presolve time: 0.00s
+Presolved: 260 rows, 261 columns, 682 nonzeros
+Variable types: 0 continuous, 261 integer (54 binary)
+
+Root relaxation: objective 3.200000e+01, 106 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   32.00000    0   16          -   32.00000      -     -    0s
+H    0     0                      63.0000000   32.00000  49.2%     -    0s
+     0     0   32.00000    0   50   63.00000   32.00000  49.2%     -    0s
+     0     0 infeasible    0        63.00000   63.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 11
+  Cover: 2
+  Implied bound: 21
+  StrongCG: 12
+  Flow cover: 5
+  Zero half: 4
+  RLT: 1
+  Relax-and-lift: 9
+
+Explored 1 nodes (220 simplex iterations) in 0.02 seconds (0.01 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 63 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.300000000000e+01, best bound 6.300000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 63
+! Labeling: 1 1 1 1 1 1 1 32 32 1 63 1 1 63 32 63 63 63 63 1 1 32 63 32 32 1 63 32 32 1 1 32 1 32 63 63 32 63 32 32 1 32 32 63 1 32 63 63 63 
+! --------------------------------------------------------

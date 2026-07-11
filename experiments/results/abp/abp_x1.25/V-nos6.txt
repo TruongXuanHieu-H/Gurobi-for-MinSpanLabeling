@@ -1,0 +1,59 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/V-nos6.mtx.rnd
+! Target value is set to 411
+! Lower bound is set to 412
+! Upper bound is set to 844
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 3256 rows, 3256 columns and 6511 nonzeros (Min)
+Model fingerprint: 0x08a7f3c8
+Model has 1 linear objective coefficients
+Model has 1290 simple general constraints
+  1290 ABS
+Variable types: 0 continuous, 3256 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+02]
+  RHS range        [4e+02, 4e+02]
+
+Presolve added 0 rows and 1290 columns
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.02s
+Presolved: 3255 rows, 4546 columns, 10380 nonzeros
+Presolved model has 1290 SOS constraint(s)
+Variable types: 0 continuous, 4546 integer (0 binary)
+
+Root relaxation: objective 4.120000e+02, 1302 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  412.00000    0 1185          -  412.00000      -     -    0s
+H    0     0                     412.0000000  412.00000  0.00%     -    0s
+
+Explored 1 nodes (1302 simplex iterations) in 0.07 seconds (0.04 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 412 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.120000000000e+02, best bound 4.120000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 412
+! Labeling: 412 412 412 1 412 1 1 412 412 1 1 412 1 1 1 412 1 412 1 412 412 1 412 1 412 412 1 1 412 1 412 412 1 1 1 412 1 412 412 1 412 1 412 1 412 412 1 412 412 1 412 412 412 1 1 1 1 412 1 1 412 1 1 412 412 1 1 1 1 412 412 412 412 1 1 412 412 412 1 412 412 1 1 1 412 1 1 1 1 412 412 412 1 412 1 1 412 412 412 412 1 412 412 412 412 412 412 1 412 412 412 412 412 412 412 1 412 1 1 1 1 412 1 1 412 412 412 1 1 1 412 412 412 1 412 1 1 412 412 1 1 412 412 1 1 1 412 412 1 412 1 412 1 412 1 1 412 412 412 1 1 1 1 1 412 412 1 412 412 1 1 1 412 1 1 412 412 412 412 412 412 1 1 1 412 1 1 1 412 1 1 1 1 412 1 1 1 412 412 412 1 1 1 1 412 1 1 1 1 1 1 1 1 1 1 412 412 412 1 412 412 1 1 412 412 1 1 1 412 412 412 1 1 1 1 412 1 412 1 412 412 412 412 412 1 412 412 1 1 412 1 1 412 412 412 412 412 412 412 412 1 412 1 412 1 412 412 412 412 412 1 1 1 412 1 412 412 412 1 1 412 1 1 412 1 1 1 1 1 412 412 1 412 1 412 1 1 1 1 1 412 412 1 412 1 1 1 412 1 412 412 412 1 412 412 1 1 1 1 412 1 1 1 412 412 1 412 1 412 412 412 412 1 1 412 412 412 412 1 1 412 1 412 412 412 1 412 412 1 412 1 412 412 1 1 412 412 412 412 412 1 1 412 412 412 1 412 412 1 1 412 1 1 412 412 412 412 1 412 412 412 412 1 412 412 412 412 412 1 1 412 412 412 1 1 1 1 412 412 1 1 412 412 1 412 412 1 1 1 412 1 412 412 412 1 1 412 1 412 1 1 412 412 412 1 1 412 412 1 412 412 1 412 412 1 412 412 412 412 1 412 1 1 412 412 1 412 412 1 1 412 1 1 1 412 412 412 412 412 1 412 1 1 1 1 1 1 1 1 412 1 412 412 412 412 412 412 1 1 412 1 1 412 412 412 1 412 1 1 412 412 1 1 1 412 412 412 1 412 412 1 1 412 1 1 1 1 412 1 412 1 1 1 412 412 412 412 412 1 1 412 412 1 1 412 1 412 1 1 1 412 1 1 1 1 1 1 1 412 1 1 412 412 1 1 1 1 1 412 412 1 1 412 412 412 412 412 1 412 1 412 1 412 1 412 1 1 1 412 1 1 412 1 1 412 412 412 1 1 412 412 1 412 412 1 1 412 1 412 412 412 412 412 1 412 412 1 1 1 1 412 412 412 412 1 1 1 1 1 412 412 1 1 412 412 1 1 412 412 1 1 412 1 412 412 412 1 1 1 1 412 1 1 1 412 412 1 412 1 1 1 1 1 1 412 412 1 1 1 412 1 1 1 1 412 412 1 412 412 1 1 1 412 1 1 1 412 412 1 412 1 412 412 412 412 
+! --------------------------------------------------------

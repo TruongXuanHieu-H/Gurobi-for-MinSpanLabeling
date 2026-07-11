@@ -1,0 +1,59 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/S-sherman4.mtx.rnd
+! Target value is set to 326
+! Lower bound is set to 327
+! Upper bound is set to 683
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 3229 rows, 3229 columns and 6457 nonzeros (Min)
+Model fingerprint: 0x2208e242
+Model has 1 linear objective coefficients
+Model has 1341 simple general constraints
+  1341 ABS
+Variable types: 0 continuous, 3229 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 7e+02]
+  RHS range        [3e+02, 3e+02]
+
+Presolve added 0 rows and 1341 columns
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.02s
+Presolved: 3228 rows, 4570 columns, 10479 nonzeros
+Presolved model has 1341 SOS constraint(s)
+Variable types: 0 continuous, 4570 integer (0 binary)
+
+Root relaxation: objective 3.270000e+02, 1340 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  327.00000    0 1127          -  327.00000      -     -    0s
+H    0     0                     327.0000000  327.00000  0.00%     -    0s
+
+Explored 1 nodes (1340 simplex iterations) in 0.06 seconds (0.03 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 327 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.270000000000e+02, best bound 3.270000000000e+02, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 327
+! Labeling: 327 327 1 1 1 327 327 327 327 327 1 327 327 1 327 327 327 1 1 1 327 1 1 327 1 1 327 327 327 1 1 1 1 1 327 327 1 327 1 327 327 1 327 1 1 1 1 1 1 1 1 1 327 327 1 327 327 1 1 1 1 1 1 1 1 327 1 327 1 327 1 327 327 327 327 327 327 1 327 327 1 1 327 1 327 327 1 327 327 327 327 327 1 1 327 1 327 1 1 1 1 327 327 1 1 1 1 327 1 327 1 327 327 327 327 1 1 1 1 1 327 1 1 1 1 1 1 327 1 1 327 1 1 1 1 327 327 1 327 1 1 1 327 327 327 327 327 327 1 327 327 1 327 327 1 1 1 1 327 327 327 327 1 327 1 1 327 1 327 327 327 327 1 1 327 1 1 1 327 327 327 327 327 327 327 1 1 1 1 327 327 1 327 1 1 1 327 327 327 1 327 327 327 1 1 1 327 327 1 327 327 1 327 1 327 327 1 327 1 1 1 1 327 327 327 1 327 1 1 327 1 327 327 1 1 1 1 327 327 327 1 1 327 327 1 1 1 1 327 327 327 327 1 1 1 1 327 1 1 327 327 1 327 327 1 1 1 1 1 1 327 1 1 327 327 327 1 327 1 1 1 327 1 327 1 1 327 1 1 327 327 1 1 1 1 1 327 327 1 1 327 327 327 327 327 1 327 327 327 327 1 1 327 1 327 1 327 327 1 327 1 1 327 327 1 327 327 1 1 327 327 327 1 1 1 1 1 1 327 327 1 1 327 1 1 327 1 327 1 327 327 327 1 327 1 327 327 327 327 327 327 327 327 1 327 1 1 1 1 327 1 327 327 327 327 1 327 327 1 327 327 327 1 1 1 327 1 327 327 327 327 1 327 1 1 1 327 327 327 1 1 1 327 327 1 327 1 327 327 1 327 1 1 1 1 327 327 327 1 327 327 327 327 1 1 1 327 327 327 327 1 327 327 1 1 1 1 327 1 1 327 327 1 327 327 327 1 327 327 1 327 1 1 1 1 327 327 327 327 327 1 1 327 327 1 327 1 1 1 1 327 1 1 327 327 1 327 1 327 1 1 327 327 1 327 327 327 327 1 327 327 327 327 1 327 1 327 1 327 327 1 327 1 1 1 1 1 1 327 1 1 1 1 1 1 1 327 1 327 1 327 327 327 1 327 327 1 1 1 327 1 327 327 1 1 327 327 327 1 327 327 327 327 327 1 1 
+! --------------------------------------------------------

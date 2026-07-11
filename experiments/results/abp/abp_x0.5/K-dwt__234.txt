@@ -1,0 +1,92 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/K-dwt__234.mtx.rnd
+! Target value is set to 25
+! Lower bound is set to 26
+! Upper bound is set to 58
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 734 rows, 7228 columns and 21416 nonzeros (Min)
+Model fingerprint: 0x00842837
+Model has 1 linear objective coefficients
+Model has 162 simple general constraints
+  162 ABS
+Variable types: 0 continuous, 7228 integer (6786 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+01]
+  RHS range        [1e+00, 6e+01]
+
+Presolve added 315 rows and 273 columns
+Presolve time: 0.07s
+Presolved: 1049 rows, 7501 columns, 22277 nonzeros
+Variable types: 0 continuous, 7501 integer (6905 binary)
+
+Root relaxation: objective 2.600000e+01, 672 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.00000    0  187          -   26.00000      -     -    0s
+     0     0   26.00000    0  194          -   26.00000      -     -    0s
+     0     0   26.00000    0  571          -   26.00000      -     -    0s
+     0     0   26.00000    0  556          -   26.00000      -     -    0s
+     0     0   26.00000    0  502          -   26.00000      -     -    0s
+     0     0   26.00000    0  206          -   26.00000      -     -    0s
+     0     0   26.00000    0  583          -   26.00000      -     -    0s
+     0     0   26.00000    0  593          -   26.00000      -     -    0s
+     0     0   26.00000    0  574          -   26.00000      -     -    0s
+     0     0   26.00000    0  228          -   26.00000      -     -    1s
+     0     0   26.00000    0  228          -   26.00000      -     -    1s
+     0     0   26.00000    0  216          -   26.00000      -     -    1s
+     0     2   26.00000    0  182          -   26.00000      -     -    1s
+  1283   915   58.00000   71  428          -   26.00000      -  45.8    5s
+  2023  1252 infeasible  119               -   26.04533      -  65.2   10s
+  2592  1540   57.00000  205  153          -   26.07137      -  66.5   15s
+H 2654  1253                      58.0000000   26.07137  55.0%  66.4   16s
+H 3106  1278                      57.0000000   26.07137  54.3%  64.3   17s
+* 3480   810             359      53.0000000   26.07137  50.8%  61.5   18s
+H 4234  1136                      52.0000000   26.07506  49.9%  56.6   19s
+  4591  1289   51.00000   62  346   52.00000   26.12349  49.8%  54.3   20s
+H 4765   325                      51.0000000   26.12349  48.8%  53.3   20s
+
+Cutting planes:
+  Gomory: 40
+  Cover: 70
+  Implied bound: 60
+  Projected implied bound: 2
+  Clique: 3
+  MIR: 56
+  StrongCG: 44
+  Flow cover: 101
+  GUB cover: 73
+  Zero half: 10
+  Network: 6
+  RLT: 1
+  Relax-and-lift: 64
+
+Explored 5102 nodes (266721 simplex iterations) in 20.73 seconds (33.36 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 51 52 53 ... 58
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.100000000000e+01, best bound 5.100000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 51
+! Labeling: 1 51 51 47 1 51 26 1 26 30 21 51 50 1 31 19 38 36 26 11 27 51 1 43 1 51 30 9 1 45 24 1 1 1 1 42 1 33 51 1 51 51 51 37 1 28 51 5 1 13 8 18 1 1 26 26 51 20 26 49 26 1 26 51 26 22 2 6 1 1 15 51 17 26 51 51 48 51 4 14 46 39 1 35 40 23 32 1 41 51 29 26 51 51 1 26 12 1 25 1 51 51 1 26 44 7 34 26 10 51 16 26 50 26 39 51 3 
+! --------------------------------------------------------

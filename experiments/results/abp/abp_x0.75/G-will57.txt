@@ -1,0 +1,90 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/G-will57.mtx.rnd
+! Target value is set to 9
+! Lower bound is set to 10
+! Upper bound is set to 42
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 468 rows, 2706 columns and 7904 nonzeros (Min)
+Model fingerprint: 0xe0213991
+Model has 1 linear objective coefficients
+Model has 127 simple general constraints
+  127 ABS
+Variable types: 0 continuous, 2706 integer (2394 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+01]
+  RHS range        [1e+00, 4e+01]
+
+Presolve added 249 rows and 229 columns
+Presolve time: 0.03s
+Presolved: 717 rows, 2935 columns, 8662 nonzeros
+Variable types: 0 continuous, 2935 integer (2500 binary)
+
+Root relaxation: objective 1.000000e+01, 389 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   10.00000    0   96          -   10.00000      -     -    0s
+     0     0   10.00000    0  253          -   10.00000      -     -    0s
+     0     0   10.00000    0  224          -   10.00000      -     -    0s
+     0     0   10.00000    0  445          -   10.00000      -     -    0s
+     0     0   10.00000    0  265          -   10.00000      -     -    0s
+     0     0   10.00000    0  265          -   10.00000      -     -    0s
+     0     0   10.00000    0  229          -   10.00000      -     -    0s
+     0     2   10.00000    0  224          -   10.00000      -     -    0s
+  2279  1410   37.00000   80  106          -   19.00000      -  47.8    5s
+H 2756  1283                      40.0000000   19.00000  52.5%  47.8    6s
+ 15904 11488   29.00000  103  199   40.00000   19.00000  52.5%  17.6   10s
+*26042 16367             368      39.0000000   19.00000  51.3%  14.7   13s
+ 29294 17984   19.00000   41  161   39.00000   19.00000  51.3%  14.9   15s
+H33494 18343                      38.0000000   19.00000  50.0%  16.3   18s
+H34928 16396                      37.0000000   19.00000  48.6%  16.4   19s
+ 38226 15871 infeasible   58        37.00000   28.00000  24.3%  16.0   20s
+ 52410 17643   32.00000  158  117   37.00000   29.00000  21.6%  14.3   25s
+ 69523  8866 infeasible   55        37.00000   32.00000  13.5%  14.2   30s
+ 85928  6749 infeasible   56        37.00000   33.00000  10.8%  13.7   35s
+ 89794  7447   33.00000   73  109   37.00000   33.00000  10.8%  13.8   40s
+ 96023  5360   36.00000   48  132   37.00000   36.00000  2.70%  14.5   45s
+ 114022  1499   36.00000   43  191   37.00000   36.00000  2.70%  14.0   50s
+ 136219   905 infeasible   85        37.00000   36.00000  2.70%  13.4   55s
+ 160510   658 infeasible   44        37.00000   36.00000  2.70%  12.7   60s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 1
+  Implied bound: 16
+  MIR: 2
+  StrongCG: 2
+  Flow cover: 6
+  GUB cover: 7
+  Zero half: 1
+  Network: 2
+
+Explored 166225 nodes (2126218 simplex iterations) in 62.13 seconds (61.23 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 37 38 39 40 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.700000000000e+01, best bound 3.700000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 37
+! Labeling: 14 21 26 37 37 10 1 19 19 36 11 23 29 10 3 2 37 32 4 28 28 37 18 37 33 1 28 37 10 6 35 34 19 17 1 19 7 9 10 31 22 5 16 30 20 19 8 24 25 37 28 1 1 15 27 12 13 
+! --------------------------------------------------------

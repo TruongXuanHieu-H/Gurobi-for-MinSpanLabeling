@@ -1,0 +1,89 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/L-bcspwr03.mtx.rnd
+! Target value is set to 29
+! Lower bound is set to 30
+! Upper bound is set to 88
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 801 rows, 10861 columns and 32311 nonzeros (Min)
+Model fingerprint: 0x5754d208
+Model has 1 linear objective coefficients
+Model has 179 simple general constraints
+  179 ABS
+Variable types: 0 continuous, 10861 integer (10384 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 9e+01]
+  RHS range        [1e+00, 9e+01]
+
+Presolve added 350 rows and 294 columns
+Presolve time: 0.09s
+Presolved: 1151 rows, 11155 columns, 33244 nonzeros
+Variable types: 0 continuous, 11155 integer (10506 binary)
+
+Root relaxation: objective 3.000000e+01, 689 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   30.00000    0  192          -   30.00000      -     -    0s
+     0     0   30.00000    0  628          -   30.00000      -     -    0s
+     0     0   30.00000    0  628          -   30.00000      -     -    0s
+     0     0   30.00000    0  494          -   30.00000      -     -    0s
+     0     0   30.00000    0  642          -   30.00000      -     -    0s
+     0     0   30.00000    0  630          -   30.00000      -     -    0s
+     0     0   30.00000    0  315          -   30.00000      -     -    0s
+     0     0   30.00000    0  331          -   30.00000      -     -    0s
+     0     0   30.00000    0  219          -   30.00000      -     -    0s
+     0     2   30.00000    0  201          -   30.00000      -     -    1s
+   380   346   88.00000   39  315          -   30.00000      -   126    5s
+   657   563   63.00000   14  383          -   30.00000      -   140   10s
+  1218  1015   88.00000   66  365          -   30.00000      -   155   15s
+  1438  1131   88.00000   39  229          -   30.00000      -   167   20s
+  1641  1264   88.00000   65  168          -   30.00000      -   180   25s
+  1800  1310 infeasible   84               -   30.00000      -   199   30s
+  2050  1406   88.00000   89  251          -   30.00000      -   202   35s
+  2084  1437   88.00000   94  219          -   30.00000      -   211   40s
+  2145  1467   88.00000  102  217          -   30.00000      -   218   45s
+H 2146   895                      88.0000000   30.00000  65.9%   218   45s
+
+Cutting planes:
+  Gomory: 28
+  Cover: 55
+  Implied bound: 67
+  Projected implied bound: 1
+  Clique: 4
+  MIR: 109
+  StrongCG: 114
+  Flow cover: 153
+  GUB cover: 54
+  Zero half: 24
+  Network: 15
+  Relax-and-lift: 48
+
+Explored 2402 nodes (479916 simplex iterations) in 45.70 seconds (84.98 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 88 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.800000000000e+01, best bound 8.800000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Best span = 88
+! Labeling: 23 76 29 55 13 15 44 81 48 60 27 70 30 82 88 6 1 64 1 83 73 59 59 1 33 42 68 57 30 35 24 30 10 66 88 46 3 77 30 84 20 74 47 42 82 71 54 16 22 80 1 61 85 75 86 17 40 76 38 88 65 79 32 28 1 13 39 31 49 58 17 21 36 50 37 48 5 8 53 7 4 59 63 67 88 19 51 87 12 25 72 2 67 62 1 1 43 78 80 9 4 45 51 14 1 18 59 28 69 11 41 52 48 56 34 26 59 30 
+! --------------------------------------------------------
