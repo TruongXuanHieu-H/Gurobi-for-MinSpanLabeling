@@ -36,6 +36,7 @@ protected:
     void encode_target_value(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data)
     {
         gurobi_data.init_label(config_data, graph_data);
+        gurobi_data.init_span(config_data, graph_data);
 
         switch (config_data.target_value_type)
         {
