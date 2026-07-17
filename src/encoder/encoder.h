@@ -37,17 +37,45 @@ protected:
     {
         gurobi_data.init_label(config_data, graph_data);
 
-        for (const auto &edge : graph_data.edges)
+        switch (config_data.target_value_type)
         {
-            GRBVar diff = gurobi_data.model->addVar(-config_data.upper_bound, config_data.upper_bound, 0, GRB_INTEGER, "diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+        case TargetValueType::abp:
+        {
+            for (const auto &edge : graph_data.edges)
+            {
+                GRBVar diff = gurobi_data.model->addVar(-config_data.upper_bound, config_data.upper_bound, 0, GRB_INTEGER, "diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
 
-            gurobi_data.model->addConstr(diff == gurobi_data.label[edge.u] - gurobi_data.label[edge.v]);
+                gurobi_data.model->addConstr(diff == gurobi_data.label[edge.u] - gurobi_data.label[edge.v]);
 
-            GRBVar absDiff = gurobi_data.model->addVar(0, config_data.upper_bound, 0, GRB_INTEGER, "abs_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+                GRBVar absDiff = gurobi_data.model->addVar(0, config_data.upper_bound, 0, GRB_INTEGER, "abs_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
 
-            gurobi_data.model->addGenConstrAbs(absDiff, diff);
+                gurobi_data.model->addGenConstrAbs(absDiff, diff);
 
-            gurobi_data.model->addConstr(absDiff >= config_data.target_value);
+                gurobi_data.model->addConstr(absDiff >= config_data.target_value);
+            }
+            break;
+        }
+        case TargetValueType::cabp:
+        {
+            for (const auto &edge : graph_data.edges)
+            {
+                GRBVar diff = gurobi_data.model->addVar(-config_data.upper_bound, config_data.upper_bound, 0, GRB_INTEGER, "diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+                gurobi_data.model->addConstr(diff == gurobi_data.label[edge.u] - gurobi_data.label[edge.v]);
+
+                GRBVar absDiff = gurobi_data.model->addVar(0, config_data.upper_bound, 0, GRB_INTEGER, "abs_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+                gurobi_data.model->addGenConstrAbs(absDiff, diff);
+
+                GRBVar cyclicDiff = gurobi_data.model->addVar(0, config_data.upper_bound, 0, GRB_INTEGER, "cyclic_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+                gurobi_data.model->addConstr(cyclicDiff == gurobi_data.span - absDiff);
+
+                GRBVar minDiff = gurobi_data.model->addVar(0, config_data.upper_bound, 0, GRB_INTEGER, "min_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+                GRBVar vars[] = {absDiff, cyclicDiff};
+                gurobi_data.model->addGenConstrMin(minDiff, vars, 2, GRB_INTEGER, "min_diff_" + std::to_string(edge.u) + "_" + std::to_string(edge.v));
+
+                gurobi_data.model->addConstr(minDiff >= config_data.target_value);
+            }
+            break;
+        }
         }
     }
 
