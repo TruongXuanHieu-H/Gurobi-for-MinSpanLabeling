@@ -60,13 +60,13 @@ int main(int argc, char *argv[])
     GurobiData gurobi_data(config_data, graph_data);
 
     std::unique_ptr<Encoder> encoder = get_encoder(config_data.vertices_mode);
-    GRBModel model = encoder->encode_model(config_data, graph_data, gurobi_data);
-    model.set(GRB_IntParam_OutputFlag, 1);
-    model.set(GRB_DoubleParam_TimeLimit, config_data.time_limit);
-    model.optimize();
+    encoder->encode_model(config_data, graph_data, gurobi_data);
+    gurobi_data.model.set(GRB_IntParam_OutputFlag, 1);
+    gurobi_data.model.set(GRB_DoubleParam_TimeLimit, config_data.time_limit);
+    gurobi_data.model.optimize();
 
-    int status = model.get(GRB_IntAttr_Status);
-    int solCount = model.get(GRB_IntAttr_SolCount);
+    int status = gurobi_data.model.get(GRB_IntAttr_Status);
+    int solCount = gurobi_data.model.get(GRB_IntAttr_SolCount);
 
     if (solCount > 0)
     {
