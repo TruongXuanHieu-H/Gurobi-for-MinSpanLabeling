@@ -10,67 +10,51 @@
 class GurobiData
 {
 public:
-    std::unique_ptr<GRBEnv> env;
-    std::unique_ptr<GRBModel> model;
+    GRBEnv env;
+    GRBModel model;
 
-    std::vector<GRBVar> label; // label[i] represents the label assigned to vertex i
-    bool is_label_initialized = false;
+    /* label[i] = j + 1 is equivalent to assignment[i][j] = true */
+    std::vector<GRBVar> label;
 
-    std::vector<std::vector<GRBVar>> assignment; // assignment[i][j] = true iff vertex i is assigned label j
-    bool is_assignment_initialized = false;
+    /* assignment[i][j] = true is equivalent to label[i] = j + 1 */
+    std::vector<std::vector<GRBVar>> assignment;
 
     GRBVar span;
-    bool is_span_initialized = false;
 
-    GurobiData(ConfigData &config_data, GraphData &graph_data)
+    GurobiData(const ConfigData &config_data, const GraphData &graph_data) : env(), model(env)
     {
-        env = std::make_unique<GRBEnv>(true);
-        env->start();
-
-        model = std::make_unique<GRBModel>(env.get());
-    }
-
-    void init_label(ConfigData &config_data, GraphData &graph_data)
-    {
-        if (is_label_initialized)
-            return; // Already initialized
-
-        label.resize(graph_data.num_vertices + 1);
-        for (int i = 1; i <= graph_data.num_vertices; i++)
-        {
-            label[i] = model->addVar(1, config_data.upper_bound, 0, GRB_INTEGER, "vertex_" + std::to_string(i));
-        }
-
-        is_label_initialized = true;
-    }
-
-    void init_assignment(ConfigData &config_data, GraphData &graph_data)
-    {
-        if (is_assignment_initialized)
-            return; // Already initialized
-
-        assignment.resize(graph_data.num_vertices + 1);
-        for (int i = 1; i <= graph_data.num_vertices; i++)
-        {
-            assignment[i].resize(config_data.upper_bound + 1);
-            for (int j = 1; j <= config_data.upper_bound; j++)
-                assignment[i][j] = model->addVar(0, 1, 0, GRB_BINARY, "vertex_" + std::to_string(i) + "_label_" + std::to_string(j));
-        }
-
-        is_assignment_initialized = true;
-    }
-
-    void init_span(ConfigData &config_data, GraphData &graph_data)
-    {
-        if (is_span_initialized)
-            return; // Already initialized
-
-        span = model->addVar(config_data.lower_bound, config_data.upper_bound, 0, GRB_INTEGER, "span");
-
-        is_span_initialized = true;
+        init_label(config_data, graph_data);
+        init_assignment(config_data, graph_data);
+        init_span(config_data, graph_data);
     }
 
     ~GurobiData() = default;
+
+private:
+    void init_label(const ConfigData &config_data, const GraphData &graph_data)
+    {
+        label.resize(graph_data.num_vertices);
+        for (int i = 0; i < graph_data.num_vertices; i++)
+        {
+            label[i] = model.addVar(1, config_data.upper_bound, 0, GRB_INTEGER);
+        }
+    }
+
+    void init_assignment(const ConfigData &config_data, const GraphData &graph_data)
+    {
+        assignment.resize(graph_data.num_vertices);
+        for (int i = 0; i < graph_data.num_vertices; i++)
+        {
+            assignment[i].resize(config_data.upper_bound);
+            for (int j = 0; j < config_data.upper_bound; j++)
+                assignment[i][j] = model.addVar(0, 1, 0, GRB_BINARY);
+        }
+    }
+
+    void init_span(const ConfigData &config_data, const GraphData &graph_data)
+    {
+        span = model.addVar(config_data.lower_bound, config_data.upper_bound, 0, GRB_INTEGER);
+    }
 };
 
 #endif

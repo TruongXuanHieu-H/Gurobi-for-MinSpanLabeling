@@ -6,7 +6,7 @@
 class HasHoleEncoder : public Encoder
 {
 public:
-    void encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data) override;
+    GRBModel encode_model(ConfigData &config_data, GraphData &graph_data, GurobiData &gurobi_data) override;
 };
 
 #endif

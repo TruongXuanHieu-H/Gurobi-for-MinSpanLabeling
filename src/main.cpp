@@ -23,8 +23,10 @@ std::unique_ptr<Encoder> get_encoder(VerticesMode vertices_mode)
     {
     case VerticesMode::no_hole:
         return std::make_unique<NoHoleEncoder>();
+
     case VerticesMode::has_hole:
         return std::make_unique<HasHoleEncoder>();
+
     case VerticesMode::all_diff:
         return std::make_unique<AllDiffEncoder>();
 
@@ -39,8 +41,10 @@ std::unique_ptr<Verifier> get_verifier(VerticesMode vertices_mode)
     {
     case VerticesMode::no_hole:
         return std::make_unique<NoHoleVerifier>();
+
     case VerticesMode::has_hole:
         return std::make_unique<HasHoleVerifier>();
+
     case VerticesMode::all_diff:
         return std::make_unique<AllDiffVerifier>();
 
@@ -56,53 +60,83 @@ int main(int argc, char *argv[])
     GurobiData gurobi_data(config_data, graph_data);
 
     std::unique_ptr<Encoder> encoder = get_encoder(config_data.vertices_mode);
-    encoder->encode_model(config_data, graph_data, gurobi_data);
+    GRBModel model = encoder->encode_model(config_data, graph_data, gurobi_data);
+    model.set(GRB_IntParam_OutputFlag, 1);
+    model.set(GRB_DoubleParam_TimeLimit, config_data.time_limit);
+    model.optimize();
 
-    gurobi_data.model->set(GRB_IntParam_OutputFlag, 1);
-    gurobi_data.model->set(GRB_DoubleParam_TimeLimit, config_data.time_limit);
+    int status = model.get(GRB_IntAttr_Status);
+    int solCount = model.get(GRB_IntAttr_SolCount);
 
-    gurobi_data.model->optimize();
-
-    int status = gurobi_data.model->get(GRB_IntAttr_Status);
-
-    if (status == GRB_OPTIMAL || status == GRB_TIME_LIMIT || status == GRB_SUBOPTIMAL)
+    if (solCount > 0)
     {
-        if (gurobi_data.model->get(GRB_IntAttr_SolCount) > 0)
+        std::vector<int> solution(graph_data.num_vertices);
+
+        for (int v = 0; v < graph_data.num_vertices; v++)
         {
-            std::vector<int> solution(graph_data.num_vertices + 1);
-
-            for (int v = 1; v <= graph_data.num_vertices; v++)
-                solution[v] = static_cast<int>(gurobi_data.label[v].get(GRB_DoubleAttr_X));
-
-            int solution_span = static_cast<int>(gurobi_data.span.get(GRB_DoubleAttr_X));
-
-            std::unique_ptr<Verifier> verifier = get_verifier(config_data.vertices_mode);
-
-            if (verifier->verify(config_data, graph_data, solution, solution_span))
-            {
-                std::cout << "! --------------------------------------------------------\n";
-                std::cout << "! Best span = " << solution_span << "\n";
-                std::cout << "! Labeling: ";
-
-                for (int v = 1; v <= graph_data.num_vertices; v++)
-                    std::cout << solution[v] << " ";
-
-                std::cout << "\n";
-                std::cout << "! --------------------------------------------------------\n";
-            }
+            solution[v] = static_cast<int>(gurobi_data.label[v].get(GRB_DoubleAttr_X));
         }
-        else
+        int solution_span = static_cast<int>(gurobi_data.span.get(GRB_DoubleAttr_X));
+
+        std::cout << "! --------------------------------------------------------\n";
+        switch (status)
         {
-            std::cout << "! --------------------------------------------------------\n";
-            std::cout << "! No feasible solution\n";
-            std::cout << "! --------------------------------------------------------\n";
+        case GRB_OPTIMAL:
+            std::cout << "! Status: OPTIMAL\n";
+            break;
+
+        case GRB_TIME_LIMIT:
+            std::cout << "! Status: FEASIBLE (time limit reached)\n";
+            break;
+
+        case GRB_SUBOPTIMAL:
+            std::cout << "! Status: FEASIBLE (suboptimal)\n";
+            break;
+
+        default:
+            std::cout << "! Status = " << status << "\n";
+            break;
+        }
+        std::cout << "! Best span = " << solution_span << "\n";
+        std::cout << "! Labeling: ";
+
+        for (int v = 0; v < graph_data.num_vertices; v++)
+        {
+            std::cout << solution[v] << " ";
+        }
+        std::cout << "\n";
+        std::cout << "! --------------------------------------------------------\n";
+
+        std::unique_ptr<Verifier> verifier = get_verifier(config_data.vertices_mode);
+        if (verifier->verify(config_data, graph_data, solution, solution_span))
+        {
+            std::cout << "! All verification passed\n";
         }
     }
     else
     {
         std::cout << "! --------------------------------------------------------\n";
-        std::cout << "! Optimization failed\n";
-        std::cout << "! Status = " << status << "\n";
+
+        switch (status)
+        {
+        case GRB_INFEASIBLE:
+            std::cout << "! Problem is INFEASIBLE\n";
+            break;
+
+        case GRB_INF_OR_UNBD:
+            std::cout << "! Problem is INFEASIBLE OR UNBOUNDED\n";
+            break;
+
+        case GRB_UNBOUNDED:
+            std::cout << "! Problem is UNBOUNDED\n";
+            break;
+
+        default:
+            std::cout << "! Optimization failed\n";
+            std::cout << "! Status = " << status << "\n";
+            break;
+        }
+
         std::cout << "! --------------------------------------------------------\n";
     }
 

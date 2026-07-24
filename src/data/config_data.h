@@ -6,14 +6,14 @@
 enum class VerticesMode
 {
     no_hole,  // All the labels must be used.
-    all_diff, // All the labels must be different.
     has_hole, // No constraints.
+    all_diff, // All the labels must be different.
 };
 
-enum class TargetValueType
+enum class TargetValueMode
 {
-    abp, // Linear target
-    cabp,
+    abp,  // Antibandwidth
+    cabp, // Cyclic Antibandwidth
 };
 
 class ConfigData
@@ -48,15 +48,15 @@ public:
             vertices_mode = VerticesMode::no_hole;
             std::cout << "! Vertices mode is set to No hole\n";
         }
-        else if (v_mode == "all_diff")
-        {
-            vertices_mode = VerticesMode::all_diff;
-            std::cout << "! Vertices mode is set to All different\n";
-        }
         else if (v_mode == "has_hole")
         {
             vertices_mode = VerticesMode::has_hole;
             std::cout << "! Vertices mode is set to Has hole\n";
+        }
+        else if (v_mode == "all_diff")
+        {
+            vertices_mode = VerticesMode::all_diff;
+            std::cout << "! Vertices mode is set to All different\n";
         }
         else
         {
@@ -64,29 +64,31 @@ public:
             exit(1);
         }
 
-        std::string t_v_type = argv[7];
-        if (t_v_type == "abp")
+        std::string target_value_mode = argv[7];
+        if (target_value_mode == "abp")
         {
-            target_value_type = TargetValueType::abp;
+            this->target_value_mode = TargetValueMode::abp;
+            std::cout << "! Target value mode is set to Antibandwidth\n";
         }
-        else if (t_v_type == "cabp")
+        else if (target_value_mode == "cabp")
         {
-            target_value_type = TargetValueType::cabp;
+            this->target_value_mode = TargetValueMode::cabp;
+            std::cout << "! Target value mode is set to Cyclic Antibandwidth\n";
         }
         else
         {
-            std::cerr << "! Target value type " << t_v_type << " is undefined\n";
+            std::cerr << "! Target value mode " << target_value_mode << " is undefined\n";
             exit(1);
         }
     }
 
     std::string instance_dir;
-    TargetValueType target_value_type;
     int target_value;
     int lower_bound;
     int upper_bound;
     int time_limit;
     VerticesMode vertices_mode;
+    TargetValueMode target_value_mode;
 };
 
 #endif
