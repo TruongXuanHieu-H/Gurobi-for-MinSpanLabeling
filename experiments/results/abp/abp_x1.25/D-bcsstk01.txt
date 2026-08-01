@@ -4,6 +4,7 @@
 ! Upper bound is set to 60
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,46 +20,49 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 401 rows, 401 columns and 801 nonzeros (Min)
-Model fingerprint: 0x1ca9c316
+Optimize a model with 355 rows, 3329 columns and 801 nonzeros (Min)
+Model fingerprint: 0x0e8dc362
 Model has 1 linear objective coefficients
-Model has 176 simple general constraints
-  176 ABS
-Variable types: 0 continuous, 401 integer (0 binary)
+Model has 272 simple general constraints
+  176 ABS, 96 INDICATOR
+Variable types: 0 continuous, 3329 integer (2928 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 6e+01]
-  RHS range        [1e+01, 3e+01]
+  RHS range        [1e+00, 3e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 351 rows and 352 columns
+Presolve added 446 rows and 0 columns
+Presolve removed 0 rows and 2528 columns
 Presolve time: 0.01s
-Presolved: 752 rows, 753 columns, 2032 nonzeros
-Variable types: 0 continuous, 753 integer (176 binary)
+Presolved: 801 rows, 801 columns, 2272 nonzeros
+Variable types: 0 continuous, 801 integer (224 binary)
 
-Root relaxation: objective 1.200000e+01, 353 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 1.200000e+01, 400 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   12.00000    0   74          -   12.00000      -     -    0s
-     0     0   12.00000    0  370          -   12.00000      -     -    0s
-     0     0   12.00000    0  310          -   12.00000      -     -    0s
-     0     0   12.00000    0  269          -   12.00000      -     -    0s
-     0     0   12.00000    0  131          -   12.00000      -     -    0s
-     0     0   12.00000    0  131          -   12.00000      -     -    0s
-     0     0   12.00000    0  111          -   12.00000      -     -    0s
-     0     2   12.00000    0  111          -   12.00000      -     -    0s
-H 1221   904                      56.0000000   13.00000  76.8%  20.8    1s
+     0     0   12.00000    0   88          -   12.00000      -     -    0s
+     0     0   12.00000    0  289          -   12.00000      -     -    0s
+     0     0   12.00000    0  274          -   12.00000      -     -    0s
+     0     0   12.00000    0  425          -   12.00000      -     -    0s
+     0     0   12.00000    0  179          -   12.00000      -     -    0s
+     0     0   12.00000    0  178          -   12.00000      -     -    0s
+     0     0   12.00000    0  147          -   12.00000      -     -    0s
+     0     2   12.00000    0  132          -   12.00000      -     -    0s
+H 1309   901                      56.0000000   14.00000  75.0%  20.0    1s
 
 Cutting planes:
-  Gomory: 1
-  Implied bound: 50
-  MIR: 6
-  Flow cover: 52
-  Inf proof: 1
+  Gomory: 2
+  Implied bound: 43
+  MIR: 4
+  StrongCG: 1
+  Flow cover: 48
 
-Explored 9220 nodes (174421 simplex iterations) in 4.12 seconds (2.70 work units)
+Explored 5637 nodes (144549 simplex iterations) in 4.75 seconds (3.18 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 1: 56 
@@ -66,6 +70,8 @@ Solution count 1: 56
 Optimal solution found (tolerance 1.00e-04)
 Best objective 5.600000000000e+01, best bound 5.600000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 56
-! Labeling: 23 45 23 12 45 23 23 56 1 12 23 45 45 1 34 34 23 12 1 34 1 34 56 34 23 34 45 1 56 56 23 45 1 1 23 12 34 45 45 56 12 23 23 34 23 34 12 12 
+! Labeling: 1 34 45 56 23 1 23 12 23 12 1 34 34 23 45 34 12 45 45 1 34 45 56 23 1 56 12 34 45 34 1 12 1 34 1 12 23 23 45 56 23 23 12 34 45 23 56 34 
 ! --------------------------------------------------------
+! All verification passed

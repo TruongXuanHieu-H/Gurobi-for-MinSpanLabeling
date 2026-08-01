@@ -4,6 +4,7 @@
 ! Upper bound is set to 30
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,60 +20,67 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 237 rows, 237 columns and 473 nonzeros (Min)
-Model fingerprint: 0x07f3d618
+Optimize a model with 209 rows, 1167 columns and 473 nonzeros (Min)
+Model fingerprint: 0x99c4433f
 Model has 1 linear objective coefficients
-Model has 103 simple general constraints
-  103 ABS
-Variable types: 0 continuous, 237 integer (0 binary)
+Model has 163 simple general constraints
+  103 ABS, 60 INDICATOR
+Variable types: 0 continuous, 1167 integer (930 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 3e+01]
-  RHS range        [6e+00, 2e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 205 rows and 206 columns
-Presolve time: 0.00s
-Presolved: 442 rows, 443 columns, 1193 nonzeros
-Variable types: 0 continuous, 443 integer (103 binary)
+Presolve added 264 rows and 0 columns
+Presolve removed 0 rows and 694 columns
+Presolve time: 0.01s
+Presolved: 473 rows, 473 columns, 1343 nonzeros
+Variable types: 0 continuous, 473 integer (133 binary)
 
-Root relaxation: objective 7.000000e+00, 208 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 7.000000e+00, 240 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0    7.00000    0   45          -    7.00000      -     -    0s
-     0     0    7.00000    0  131          -    7.00000      -     -    0s
-     0     0    7.00000    0  129          -    7.00000      -     -    0s
-     0     0    7.00000    0   89          -    7.00000      -     -    0s
-     0     0    7.00000    0   59          -    7.00000      -     -    0s
-     0     0    7.00000    0   59          -    7.00000      -     -    0s
-     0     0    7.00000    0   44          -    7.00000      -     -    0s
-     0     2    7.00000    0   30          -    7.00000      -     -    0s
-H   76    88                      26.0000000    7.00000  73.1%  15.9    0s
-H  135   137                      25.0000000    7.00000  72.0%  14.5    0s
-* 1026   408              51      23.0000000   13.00000  43.5%  13.8    0s
-* 1152   260              19      19.0000000   13.00000  31.6%  13.7    0s
+     0     0    7.00000    0   52          -    7.00000      -     -    0s
+     0     0    7.00000    0  176          -    7.00000      -     -    0s
+     0     0    7.00000    0  147          -    7.00000      -     -    0s
+     0     0    7.00000    0  275          -    7.00000      -     -    0s
+     0     0    7.00000    0  132          -    7.00000      -     -    0s
+     0     0   13.00000    0  140          -   13.00000      -     -    0s
+     0     0   13.00000    0  329          -   13.00000      -     -    0s
+     0     0   13.00000    0   80          -   13.00000      -     -    0s
+     0     0   13.00000    0   80          -   13.00000      -     -    0s
+     0     0   13.00000    0   70          -   13.00000      -     -    0s
+     0     2   13.00000    0   50          -   13.00000      -     -    0s
+H  204   251                      25.0000000   13.00000  48.0%  16.5    0s
+*  515   275              36      19.0000000   13.00000  31.6%  13.7    0s
 
 Cutting planes:
-  Gomory: 40
-  Cover: 7
-  Implied bound: 198
-  MIR: 78
-  StrongCG: 72
-  Flow cover: 25
-  Inf proof: 6
-  Mod-K: 2
-  Relax-and-lift: 41
+  Gomory: 107
+  Cover: 6
+  Implied bound: 189
+  MIR: 165
+  StrongCG: 89
+  Flow cover: 28
+  Inf proof: 4
+  Zero half: 3
+  Mod-K: 4
+  Relax-and-lift: 60
 
-Explored 1456 nodes (17987 simplex iterations) in 0.29 seconds (0.25 work units)
+Explored 856 nodes (12736 simplex iterations) in 0.28 seconds (0.22 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 4: 19 23 25 26 
+Solution count 2: 19 25 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 19
-! Labeling: 7 1 7 13 1 13 13 7 19 19 1 1 13 1 1 19 19 19 1 19 7 13 13 13 7 7 1 7 19 13 
+! Labeling: 19 13 19 7 13 7 7 1 1 1 13 13 7 13 13 19 1 1 13 19 1 7 7 7 19 1 13 19 19 7 
 ! --------------------------------------------------------
+! All verification passed

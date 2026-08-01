@@ -1,0 +1,93 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/cabp/A-pores_1.mtx.rnd
+! Target value is set to 6
+! Lower bound is set to 7
+! Upper bound is set to 30
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Cyclic Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 372 rows, 1167 columns and 2509 nonzeros (Min)
+Model fingerprint: 0x76178a10
+Model has 1 linear objective coefficients
+Model has 163 simple general constraints
+  103 ABS, 60 INDICATOR
+Variable types: 0 continuous, 1167 integer (930 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 295 rows and 191 columns
+Presolve time: 0.03s
+Presolved: 667 rows, 1358 columns, 3439 nonzeros
+Variable types: 0 continuous, 1358 integer (1018 binary)
+
+Root relaxation: objective 1.200000e+01, 304 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   12.00000    0   64          -   12.00000      -     -    0s
+     0     0   12.00000    0  259          -   12.00000      -     -    0s
+     0     0   12.00000    0  177          -   12.00000      -     -    0s
+     0     0   12.00000    0  372          -   12.00000      -     -    0s
+     0     0   12.00000    0  186          -   12.00000      -     -    0s
+     0     0   12.00000    0  185          -   12.00000      -     -    0s
+     0     0   12.00000    0  107          -   12.00000      -     -    0s
+     0     2   12.00000    0  107          -   12.00000      -     -    0s
+H  220   156                      30.0000000   12.00000  60.0%  30.3    0s
+H  247   186                      26.0000000   12.00000  53.8%  29.2    0s
+H  281   201                      25.0000000   12.00000  52.0%  29.8    0s
+  1348   895   20.00000  109  135   25.00000   14.00000  44.0%  18.3    5s
+ 12139  3939 infeasible   83        25.00000   18.00000  28.0%  12.0   10s
+ 28139  5187   23.00000   35  104   25.00000   22.00000  12.0%  10.8   15s
+ 41687  4283 infeasible  108        25.00000   24.00000  4.00%   9.5   20s
+ 52763  1966   24.00000   55   44   25.00000   24.00000  4.00%   9.2   25s
+ 69290  1658 infeasible   45        25.00000   24.00000  4.00%   8.3   30s
+ 86066  1144 infeasible   76        25.00000   24.00000  4.00%   7.8   35s
+ 113120   414 infeasible   64        25.00000   24.00000  4.00%   7.1   40s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 6
+  Cover: 10
+  Implied bound: 27
+  Projected implied bound: 2
+  Clique: 2
+  MIR: 41
+  StrongCG: 21
+  Flow cover: 47
+  GUB cover: 19
+  Inf proof: 6
+  Relax-and-lift: 17
+
+Explored 120400 nodes (862057 simplex iterations) in 42.01 seconds (20.27 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 25 26 30 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.500000000000e+01, best bound 2.500000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 25
+! Labeling: 7 1 19 13 25 13 13 19 7 19 25 13 13 1 25 7 7 7 1 19 19 13 1 13 19 7 25 19 7 13 
+! --------------------------------------------------------
+! All verification passed

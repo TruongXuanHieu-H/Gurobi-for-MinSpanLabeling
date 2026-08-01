@@ -4,6 +4,7 @@
 ! Upper bound is set to 147
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,49 +20,49 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 442 rows, 442 columns and 883 nonzeros (Min)
-Model fingerprint: 0x13c0bd8d
+Optimize a model with 327 rows, 17758 columns and 883 nonzeros (Min)
+Model fingerprint: 0x42365e7b
 Model has 1 linear objective coefficients
-Model has 162 simple general constraints
-  162 ABS
-Variable types: 0 continuous, 442 integer (0 binary)
+Model has 396 simple general constraints
+  162 ABS, 234 INDICATOR
+Variable types: 0 continuous, 17758 integer (17316 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+02]
-  RHS range        [6e+01, 7e+01]
+  RHS range        [1e+00, 7e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 323 rows and 324 columns
-Presolve time: 0.01s
-Presolved: 765 rows, 766 columns, 2016 nonzeros
-Variable types: 0 continuous, 766 integer (162 binary)
+Presolve added 556 rows and 0 columns
+Presolve removed 0 rows and 16875 columns
+Presolve time: 0.02s
+Presolved: 883 rows, 883 columns, 2601 nonzeros
+Variable types: 0 continuous, 883 integer (279 binary)
 
-Root relaxation: objective 6.400000e+01, 323 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 6.400000e+01, 393 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   64.00000    0   40          -   64.00000      -     -    0s
-     0     0   64.00000    0   81          -   64.00000      -     -    0s
-     0     0   64.00000    0  145          -   64.00000      -     -    0s
-     0     0   64.00000    0   89          -   64.00000      -     -    0s
-     0     0   64.00000    0  103          -   64.00000      -     -    0s
+     0     0   64.00000    0   49          -   64.00000      -     -    0s
+     0     0   64.00000    0  219          -   64.00000      -     -    0s
+     0     0   64.00000    0  355          -   64.00000      -     -    0s
+     0     0   64.00000    0   42          -   64.00000      -     -    0s
 H    0     0                     127.0000000   64.00000  49.6%     -    0s
-     0     0   64.00000    0  196  127.00000   64.00000  49.6%     -    0s
-     0     0   64.00000    0  196  127.00000   64.00000  49.6%     -    0s
-     0     0   64.00000    0  116  127.00000   64.00000  49.6%     -    0s
+     0     0   64.00000    0   66  127.00000   64.00000  49.6%     -    0s
 
 Cutting planes:
-  Gomory: 13
-  Cover: 2
-  Implied bound: 66
-  MIR: 28
-  StrongCG: 3
-  Flow cover: 21
-  Zero half: 9
-  Relax-and-lift: 27
+  Gomory: 34
+  Cover: 48
+  Implied bound: 136
+  MIR: 98
+  StrongCG: 6
+  Flow cover: 25
+  Zero half: 7
+  Relax-and-lift: 68
 
-Explored 1 nodes (1773 simplex iterations) in 0.11 seconds (0.06 work units)
+Explored 1 nodes (1495 simplex iterations) in 0.12 seconds (0.06 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 1: 127 
@@ -69,6 +70,8 @@ Solution count 1: 127
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.270000000000e+02, best bound 1.270000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 127
-! Labeling: 64 64 1 1 64 1 64 64 64 127 64 1 127 127 64 1 1 1 1 64 1 1 1 1 127 1 64 127 64 64 1 64 64 64 64 1 64 1 127 1 127 1 127 127 127 127 1 1 1 64 64 1 64 64 127 1 64 64 1 1 64 1 1 1 64 1 127 127 64 1 64 127 1 1 127 127 1 127 64 64 127 64 64 127 1 64 64 64 1 127 1 127 127 1 64 1 64 1 64 1 127 1 64 1 1 1 64 1 64 64 64 1 64 1 64 64 64 
+! Labeling: 64 64 127 127 64 64 64 64 127 1 1 64 127 64 64 1 64 127 127 1 64 1 64 1 1 1 1 1 1 127 64 127 64 1 64 1 1 1 64 1 64 1 1 1 1 1 1 127 127 1 64 1 1 1 1 1 1 1 127 127 1 64 127 64 127 1 64 64 1 64 1 64 64 1 127 64 1 1 127 1 64 64 127 64 1 1 127 64 64 64 1 64 64 64 64 1 127 1 1 1 1 127 1 1 64 1 64 1 1 127 64 64 64 64 64 1 64 
 ! --------------------------------------------------------
+! All verification passed

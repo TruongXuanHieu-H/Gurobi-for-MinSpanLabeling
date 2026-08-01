@@ -4,6 +4,7 @@
 ! Upper bound is set to 150
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,42 +20,43 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 595 rows, 595 columns and 1189 nonzeros (Min)
-Model fingerprint: 0x937f6558
+Optimize a model with 497 rows, 15695 columns and 1189 nonzeros (Min)
+Model fingerprint: 0x48997f6b
 Model has 1 linear objective coefficients
-Model has 247 simple general constraints
-  247 ABS
-Variable types: 0 continuous, 595 integer (0 binary)
+Model has 447 simple general constraints
+  247 ABS, 200 INDICATOR
+Variable types: 0 continuous, 15695 integer (15100 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+02]
-  RHS range        [5e+01, 8e+01]
+  RHS range        [1e+00, 8e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 493 rows and 494 columns
-Presolve time: 0.01s
-Presolved: 1088 rows, 1089 columns, 2917 nonzeros
-Variable types: 0 continuous, 1089 integer (247 binary)
+Presolve added 692 rows and 0 columns
+Presolve removed 0 rows and 14506 columns
+Presolve time: 0.02s
+Presolved: 1189 rows, 1189 columns, 3417 nonzeros
+Variable types: 0 continuous, 1189 integer (347 binary)
 
-Root relaxation: objective 5.300000e+01, 442 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 5.300000e+01, 563 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   53.00000    0   64          -   53.00000      -     -    0s
-     0     0   53.00000    0  216          -   53.00000      -     -    0s
-     0     0   53.00000    0  215          -   53.00000      -     -    0s
-     0     0   53.00000    0  488          -   53.00000      -     -    0s
-     0     0   53.00000    0  279          -   53.00000      -     -    0s
-     0     0  105.00000    0  236          -  105.00000      -     -    0s
-     0     0  105.00000    0  499          -  105.00000      -     -    0s
-     0     0  105.00000    0  241          -  105.00000      -     -    0s
-     0     0  105.00000    0  241          -  105.00000      -     -    0s
-     0     0  105.00000    0  172          -  105.00000      -     -    0s
-     0     2  105.00000    0  172          -  105.00000      -     -    0s
-* 1706   961              33     105.0000000  105.00000  0.00%  14.1    1s
+     0     0   53.00000    0   61          -   53.00000      -     -    0s
+     0     0   53.00000    0  275          -   53.00000      -     -    0s
+     0     0  105.00000    0  272          -  105.00000      -     -    0s
+     0     0  105.00000    0  618          -  105.00000      -     -    0s
+     0     0  105.00000    0  596          -  105.00000      -     -    0s
+     0     0  105.00000    0  170          -  105.00000      -     -    0s
+     0     0  105.00000    0  170          -  105.00000      -     -    0s
+     0     0  105.00000    0  121          -  105.00000      -     -    0s
+     0     2  105.00000    0  121          -  105.00000      -     -    0s
+* 1910   939              50     105.0000000  105.00000  0.00%  15.2    1s
 
-Explored 1848 nodes (29569 simplex iterations) in 1.06 seconds (0.75 work units)
+Explored 2144 nodes (35413 simplex iterations) in 1.17 seconds (0.93 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 1: 105 
@@ -62,6 +64,8 @@ Solution count 1: 105
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.050000000000e+02, best bound 1.050000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 105
-! Labeling: 53 53 53 53 105 105 105 53 1 1 105 1 53 53 1 53 53 105 105 1 53 105 105 105 105 1 1 1 1 1 105 53 105 105 53 105 1 53 1 53 53 53 53 1 105 53 1 53 105 105 53 53 53 105 53 1 1 105 53 1 53 105 53 105 53 1 1 1 1 105 53 1 53 1 1 105 105 105 1 53 1 53 53 53 1 105 1 53 1 53 53 105 1 1 105 53 1 105 53 1 
+! Labeling: 1 105 1 105 105 105 105 105 53 1 105 53 53 53 53 1 53 1 1 53 105 105 105 1 105 105 1 53 53 53 1 105 1 105 105 105 53 1 53 1 105 1 53 53 105 1 53 53 1 105 53 105 105 105 1 53 1 105 53 53 1 1 1 105 1 53 53 1 1 53 105 53 53 53 53 1 105 105 53 105 53 1 1 1 1 53 53 1 53 1 1 1 53 53 53 105 53 105 53 53 
 ! --------------------------------------------------------
+! All verification passed

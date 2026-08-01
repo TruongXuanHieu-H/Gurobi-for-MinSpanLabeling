@@ -4,6 +4,7 @@
 ! Upper bound is set to 176
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,54 +20,60 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 442 rows, 442 columns and 883 nonzeros (Min)
-Model fingerprint: 0x03aabd29
+Optimize a model with 327 rows, 21151 columns and 883 nonzeros (Min)
+Model fingerprint: 0x37536aca
 Model has 1 linear objective coefficients
-Model has 162 simple general constraints
-  162 ABS
-Variable types: 0 continuous, 442 integer (0 binary)
+Model has 396 simple general constraints
+  162 ABS, 234 INDICATOR
+Variable types: 0 continuous, 21151 integer (20709 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+02]
-  RHS range        [8e+01, 9e+01]
+  RHS range        [1e+00, 9e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 323 rows and 324 columns
-Presolve time: 0.01s
-Presolved: 765 rows, 766 columns, 2016 nonzeros
-Variable types: 0 continuous, 766 integer (162 binary)
+Presolve added 556 rows and 0 columns
+Presolve removed 0 rows and 20268 columns
+Presolve time: 0.03s
+Presolved: 883 rows, 883 columns, 2601 nonzeros
+Variable types: 0 continuous, 883 integer (279 binary)
 
-Root relaxation: objective 7.700000e+01, 325 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 7.700000e+01, 409 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   77.00000    0   35          -   77.00000      -     -    0s
+     0     0   77.00000    0   47          -   77.00000      -     -    0s
+H    0     0                     154.0000000   77.00000  50.0%     -    0s
+     0     0   77.00000    0  144  154.00000   77.00000  50.0%     -    0s
 H    0     0                     153.0000000   77.00000  49.7%     -    0s
-     0     0   77.00000    0  137  153.00000   77.00000  49.7%     -    0s
-     0     0   77.00000    0  137  153.00000   77.00000  49.7%     -    0s
-     0     0   77.00000    0  310  153.00000   77.00000  49.7%     -    0s
-     0     0   77.00000    0  310  153.00000   77.00000  49.7%     -    0s
-     0     0   77.00000    0   91  153.00000   77.00000  49.7%     -    0s
+     0     0   77.00000    0  133  153.00000   77.00000  49.7%     -    0s
+     0     0   77.00000    0  269  153.00000   77.00000  49.7%     -    0s
+     0     0   77.00000    0  269  153.00000   77.00000  49.7%     -    0s
+     0     0   77.00000    0   81  153.00000   77.00000  49.7%     -    0s
 
 Cutting planes:
-  Gomory: 38
-  Cover: 34
-  Implied bound: 124
-  Clique: 16
-  MIR: 28
-  StrongCG: 4
-  Flow cover: 15
-  Relax-and-lift: 38
+  Gomory: 58
+  Cover: 45
+  Implied bound: 86
+  MIR: 53
+  StrongCG: 7
+  Flow cover: 10
+  Mod-K: 1
+  Relax-and-lift: 28
 
-Explored 1 nodes (1411 simplex iterations) in 0.12 seconds (0.05 work units)
+Explored 1 nodes (1714 simplex iterations) in 0.13 seconds (0.07 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 1: 153 
+Solution count 2: 153 154 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.530000000000e+02, best bound 1.530000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 153
-! Labeling: 1 77 153 1 1 153 1 153 77 77 77 153 153 77 77 77 77 77 1 1 77 1 1 77 153 77 1 153 153 153 1 1 77 77 77 77 1 77 153 77 77 77 153 77 153 1 153 153 77 1 1 77 153 77 153 77 77 77 1 153 77 153 77 77 1 1 77 153 77 1 77 77 1 77 153 153 1 77 1 77 153 77 77 77 1 77 153 1 77 153 77 1 1 77 1 153 1 77 1 77 77 77 77 153 77 1 77 77 77 77 153 77 1 1 77 153 1 
+! Labeling: 77 1 153 1 1 153 1 77 1 1 1 77 77 77 1 1 153 153 77 1 153 153 77 153 77 153 1 77 77 1 1 77 1 77 1 153 77 1 153 77 1 153 77 153 77 77 153 77 1 153 1 77 1 77 77 153 77 1 153 77 1 77 1 153 1 1 77 77 77 77 153 153 1 153 77 77 153 77 153 1 153 1 1 1 1 153 153 153 153 1 77 153 77 153 1 153 77 77 153 77 77 69 1 77 1 77 1 77 153 153 77 153 1 1 1 153 153 
 ! --------------------------------------------------------
+! All verification passed

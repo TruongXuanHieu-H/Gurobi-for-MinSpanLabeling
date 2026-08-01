@@ -4,6 +4,7 @@
 ! Upper bound is set to 100
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,42 +20,43 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 595 rows, 595 columns and 1189 nonzeros (Min)
-Model fingerprint: 0xf76581db
+Optimize a model with 497 rows, 10695 columns and 1189 nonzeros (Min)
+Model fingerprint: 0x76d3a251
 Model has 1 linear objective coefficients
-Model has 247 simple general constraints
-  247 ABS
-Variable types: 0 continuous, 595 integer (0 binary)
+Model has 447 simple general constraints
+  247 ABS, 200 INDICATOR
+Variable types: 0 continuous, 10695 integer (10100 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+02]
-  RHS range        [4e+01, 5e+01]
+  RHS range        [1e+00, 5e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 493 rows and 494 columns
-Presolve time: 0.01s
-Presolved: 1088 rows, 1089 columns, 2917 nonzeros
-Variable types: 0 continuous, 1089 integer (247 binary)
+Presolve added 692 rows and 0 columns
+Presolve removed 0 rows and 9506 columns
+Presolve time: 0.02s
+Presolved: 1189 rows, 1189 columns, 3417 nonzeros
+Variable types: 0 continuous, 1189 integer (347 binary)
 
-Root relaxation: objective 3.600000e+01, 443 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 3.600000e+01, 560 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   36.00000    0   65          -   36.00000      -     -    0s
-     0     0   36.00000    0  347          -   36.00000      -     -    0s
-     0     0   36.00000    0  284          -   36.00000      -     -    0s
-     0     0   36.00000    0  400          -   36.00000      -     -    0s
-     0     0   36.00000    0  249          -   36.00000      -     -    0s
-     0     0   36.00000    0  247          -   36.00000      -     -    0s
-     0     0   71.00000    0  347          -   71.00000      -     -    0s
-     0     0   71.00000    0  199          -   71.00000      -     -    0s
-     0     0   71.00000    0  199          -   71.00000      -     -    0s
-     0     0   71.00000    0  131          -   71.00000      -     -    0s
+     0     0   36.00000    0   70          -   36.00000      -     -    0s
+     0     0   36.00000    0  365          -   36.00000      -     -    0s
+     0     0   36.00000    0  364          -   36.00000      -     -    0s
+     0     0   36.00000    0  309          -   36.00000      -     -    0s
+     0     0   71.00000    0  575          -   71.00000      -     -    0s
+     0     0   71.00000    0  205          -   71.00000      -     -    0s
+     0     0   71.00000    0  204          -   71.00000      -     -    0s
+     0     0   71.00000    0  130          -   71.00000      -     -    0s
      0     2   71.00000    0  130          -   71.00000      -     -    0s
-* 2556   707              35      71.0000000   71.00000  0.00%  15.9    1s
+* 2526   785              48      71.0000000   71.00000  0.00%  18.0    1s
 
-Explored 2703 nodes (45956 simplex iterations) in 1.12 seconds (0.90 work units)
+Explored 2808 nodes (52116 simplex iterations) in 1.36 seconds (1.11 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 1: 71 
@@ -62,6 +64,8 @@ Solution count 1: 71
 Optimal solution found (tolerance 1.00e-04)
 Best objective 7.100000000000e+01, best bound 7.100000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 71
-! Labeling: 1 36 1 36 71 36 36 36 36 71 36 36 36 1 71 1 36 1 1 71 71 36 71 1 1 36 71 71 36 71 1 36 1 36 71 71 36 1 36 1 71 1 36 36 71 1 36 1 1 36 1 36 71 71 1 71 71 36 1 36 1 1 1 36 71 71 36 1 71 71 71 71 1 71 36 1 36 71 71 36 71 1 1 1 71 36 71 71 36 1 1 1 71 36 36 1 36 71 36 36 
+! Labeling: 36 1 36 1 36 71 1 1 1 1 71 71 36 36 71 36 36 36 36 71 36 1 1 36 1 1 1 71 71 71 36 1 36 71 1 1 71 36 71 1 1 1 36 71 36 1 71 36 36 71 36 1 36 1 1 71 1 71 36 71 1 36 36 71 36 71 1 1 1 71 1 36 36 71 71 36 1 36 36 1 36 1 36 36 1 71 71 36 71 36 1 36 71 71 1 36 71 36 36 71 
 ! --------------------------------------------------------
+! All verification passed

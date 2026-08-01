@@ -4,6 +4,7 @@
 ! Upper bound is set to 49
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,51 +20,57 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 168 rows, 168 columns and 335 nonzeros (Min)
-Model fingerprint: 0x782485cb
+Optimize a model with 121 rows, 2618 columns and 335 nonzeros (Min)
+Model fingerprint: 0x160705ee
 Model has 1 linear objective coefficients
-Model has 59 simple general constraints
-  59 ABS
-Variable types: 0 continuous, 168 integer (0 binary)
+Model has 157 simple general constraints
+  59 ABS, 98 INDICATOR
+Variable types: 0 continuous, 2618 integer (2450 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 5e+01]
-  RHS range        [2e+01, 2e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 92 rows and 93 columns
-Presolve time: 0.00s
-Presolved: 260 rows, 261 columns, 682 nonzeros
-Variable types: 0 continuous, 261 integer (54 binary)
+Presolve added 213 rows and 0 columns
+Presolve removed 0 rows and 2284 columns
+Presolve time: 0.01s
+Presolved: 334 rows, 334 columns, 987 nonzeros
+Variable types: 0 continuous, 334 integer (107 binary)
 
-Root relaxation: objective 2.200000e+01, 117 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 2.200000e+01, 160 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   22.00000    0   15          -   22.00000      -     -    0s
+     0     0   22.00000    0   21          -   22.00000      -     -    0s
+H    0     0                      44.0000000   22.00000  50.0%     -    0s
 H    0     0                      43.0000000   22.00000  48.8%     -    0s
-     0     0   22.00000    0   41   43.00000   22.00000  48.8%     -    0s
-     0     0   22.00000    0   43   43.00000   22.00000  48.8%     -    0s
-     0     0 infeasible    0        43.00000   43.00000  0.00%     -    0s
 
 Cutting planes:
-  Gomory: 15
-  Implied bound: 16
-  MIR: 12
-  StrongCG: 7
-  Flow cover: 6
-  Zero half: 2
-  Relax-and-lift: 15
+  Gomory: 11
+  Cover: 14
+  Implied bound: 22
+  Clique: 1
+  MIR: 7
+  StrongCG: 10
+  Flow cover: 5
+  Zero half: 3
+  RLT: 2
+  Relax-and-lift: 7
 
-Explored 1 nodes (292 simplex iterations) in 0.02 seconds (0.01 work units)
+Explored 1 nodes (287 simplex iterations) in 0.02 seconds (0.01 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 1: 43 
+Solution count 2: 43 44 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.300000000000e+01, best bound 4.300000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 43
-! Labeling: 22 22 43 43 22 1 43 1 22 22 1 22 43 43 22 22 22 22 43 43 43 1 1 1 1 22 22 1 43 22 22 1 43 43 43 1 43 22 43 22 22 22 1 1 22 1 22 22 22 
+! Labeling: 1 1 1 22 1 1 1 22 1 22 22 43 22 43 1 22 22 22 43 22 22 22 22 43 43 1 43 43 22 1 1 22 22 22 22 22 22 43 1 43 1 22 22 22 1 22 1 1 1 
 ! --------------------------------------------------------
+! All verification passed

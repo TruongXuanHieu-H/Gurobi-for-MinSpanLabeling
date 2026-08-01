@@ -1,0 +1,98 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/cabp/I-ash85.mtx.rnd
+! Target value is set to 21
+! Lower bound is set to 22
+! Upper bound is set to 85
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Cyclic Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 830 rows, 7834 columns and 16020 nonzeros (Min)
+Model fingerprint: 0xa9099124
+Model has 1 linear objective coefficients
+Model has 389 simple general constraints
+  219 ABS, 170 INDICATOR
+Variable types: 0 continuous, 7834 integer (7310 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 8e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 8e+01]
+  RHS range        [1e+00, 4e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 692 rows and 396 columns
+Presolve time: 0.09s
+Presolved: 1522 rows, 8230 columns, 18148 nonzeros
+Variable types: 0 continuous, 8230 integer (7487 binary)
+
+Root relaxation: objective 4.200000e+01, 818 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   42.00000    0  231          -   42.00000      -     -    0s
+     0     0   42.00000    0  770          -   42.00000      -     -    0s
+     0     0   42.00000    0  599          -   42.00000      -     -    0s
+     0     0   42.00000    0  608          -   42.00000      -     -    0s
+     0     0   42.00000    0  340          -   42.00000      -     -    0s
+     0     0   42.00000    0  450          -   42.00000      -     -    0s
+     0     0   42.00000    0  630          -   42.00000      -     -    1s
+     0     0   42.00000    0  308          -   42.00000      -     -    1s
+     0     0   42.00000    0  307          -   42.00000      -     -    1s
+     0     0   42.00000    0  237          -   42.00000      -     -    1s
+     0     2   42.00000    0  237          -   42.00000      -     -    1s
+  1294   951   63.00000   42  528          -   42.00000      -  31.1    5s
+H 1301   908                      85.0000000   45.00000  47.1%  30.9    8s
+  1309   914   64.00000   41  291   85.00000   45.00000  47.1%  47.7   10s
+  1667  1098 infeasible   53        85.00000   45.00000  47.1%  48.1   15s
+  2255  1200   63.00000   71  215   85.00000   45.00000  47.1%  40.8   20s
+  2446  1341   66.00000  111  200   85.00000   45.00000  47.1%  38.7   25s
+  7559  4729   84.00000   97  178   85.00000   45.00000  47.1%  16.9   30s
+ 13100  8401   84.00000  318  157   85.00000   45.00000  47.1%  12.0   35s
+H13103  3768                      84.0000000   45.00000  46.4%  12.0   35s
+ 16051  2707 infeasible   90        84.00000   63.00000  25.0%  11.4   40s
+ 26751  3414 infeasible  305        84.00000   65.00000  22.6%   8.2   45s
+ 30841  3248 infeasible  299        84.00000   65.00000  22.6%   7.6   57s
+ 36194  3617 infeasible  326        84.00000   65.00000  22.6%   6.8   60s
+ 44731  3189 infeasible   85        84.00000   65.00000  22.6%   6.3   65s
+
+Cutting planes:
+  Gomory: 5
+  Cover: 22
+  Implied bound: 51
+  Clique: 6
+  MIR: 38
+  StrongCG: 33
+  Flow cover: 69
+  GUB cover: 8
+  Inf proof: 7
+  Zero half: 4
+  Relax-and-lift: 7
+
+Explored 50575 nodes (306258 simplex iterations) in 68.61 seconds (44.45 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 84 85 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.400000000000e+01, best bound 8.400000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 84
+! Labeling: 43 1 42 2 21 1 22 22 64 22 64 1 1 22 22 65 43 64 43 1 43 43 1 84 20 64 43 42 22 64 64 43 64 64 22 22 54 1 44 84 63 1 43 43 43 64 1 22 1 1 22 22 22 22 43 22 1 43 63 21 65 43 64 43 22 22 43 64 65 64 43 1 22 63 21 21 42 1 64 64 22 64 2 22 23 
+! --------------------------------------------------------
+! All verification passed

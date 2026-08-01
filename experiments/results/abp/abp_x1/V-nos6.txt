@@ -4,6 +4,7 @@
 ! Upper bound is set to 675
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,41 +20,55 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 3256 rows, 3256 columns and 6511 nonzeros (Min)
-Model fingerprint: 0x7ee25d49
+Optimize a model with 2583 rows, 459556 columns and 6511 nonzeros (Min)
+Model fingerprint: 0xbb2b048d
 Model has 1 linear objective coefficients
-Model has 1290 simple general constraints
-  1290 ABS
-Variable types: 0 continuous, 3256 integer (0 binary)
+Model has 2640 simple general constraints
+  1290 ABS, 1350 INDICATOR
+Variable types: 0 continuous, 459556 integer (456300 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 7e+02]
-  RHS range        [3e+02, 3e+02]
+  RHS range        [1e+00, 3e+02]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 0 rows and 1290 columns
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.02s
-Presolved: 3255 rows, 4546 columns, 10380 nonzeros
+Presolve added 6688 rows and 0 columns
+Presolve removed 0 rows and 449670 columns
+Presolve time: 0.10s
+Presolved: 9271 rows, 9886 columns, 24435 nonzeros
 Presolved model has 1290 SOS constraint(s)
-Variable types: 0 continuous, 4546 integer (0 binary)
+Variable types: 0 continuous, 9886 integer (2700 binary)
+Found heuristic solution: objective 675.0000000
+Found heuristic solution: objective 674.0000000
+Found heuristic solution: objective 338.0000000
+Performing another presolve...
+Presolve removed 4665 rows and 4665 columns
+Presolve time: 0.07s
+Found heuristic solution: objective 337.0000000
+Found heuristic solution: objective 336.0000000
+Found heuristic solution: objective 335.0000000
 
-Root relaxation: objective 3.300000e+02, 1302 iterations, 0.01 seconds (0.00 work units)
+Root relaxation: objective 3.300000e+02, 2578 iterations, 0.01 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  330.00000    0 1185          -  330.00000      -     -    0s
-H    0     0                     330.0000000  330.00000  0.00%     -    0s
+     0     0  330.00000    0  805  335.00000  330.00000  1.49%     -    3s
+H    0     0                     330.0000000  330.00000  0.00%     -    3s
+     0     0  330.00000    0  805  330.00000  330.00000  0.00%     -    3s
 
-Explored 1 nodes (1302 simplex iterations) in 0.07 seconds (0.04 work units)
+Explored 1 nodes (2578 simplex iterations) in 3.77 seconds (2.31 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 1: 330 
+Solution count 7: 330 335 336 ... 675
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.300000000000e+02, best bound 3.300000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 330
 ! Labeling: 330 330 330 1 330 1 1 330 330 1 1 330 1 1 1 330 1 330 1 330 330 1 330 1 330 330 1 1 330 1 330 330 1 1 1 330 1 330 330 1 330 1 330 1 330 330 1 330 330 1 330 330 330 1 1 1 1 330 1 1 330 1 1 330 330 1 1 1 1 330 330 330 330 1 1 330 330 330 1 330 330 1 1 1 330 1 1 1 1 330 330 330 1 330 1 1 330 330 330 330 1 330 330 330 330 330 330 1 330 330 330 330 330 330 330 1 330 1 1 1 1 330 1 1 330 330 330 1 1 1 330 330 330 1 330 1 1 330 330 1 1 330 330 1 1 1 330 330 1 330 1 330 1 330 1 1 330 330 330 1 1 1 1 1 330 330 1 330 330 1 1 1 330 1 1 330 330 330 330 330 330 1 1 1 330 1 1 1 330 1 1 1 1 330 1 1 1 330 330 330 1 1 1 1 330 1 1 1 1 1 1 1 1 1 1 330 330 330 1 330 330 1 1 330 330 1 1 1 330 330 330 1 1 1 1 330 1 330 1 330 330 330 330 330 1 330 330 1 1 330 1 1 330 330 330 330 330 330 330 330 1 330 1 330 1 330 330 330 330 330 1 1 1 330 1 330 330 330 1 1 330 1 1 330 1 1 1 1 1 330 330 1 330 1 330 1 1 1 1 1 330 330 1 330 1 1 1 330 1 330 330 330 1 330 330 1 1 1 1 330 1 1 1 330 330 1 330 1 330 330 330 330 1 1 330 330 330 330 1 1 330 1 330 330 330 1 330 330 1 330 1 330 330 1 1 330 330 330 330 330 1 1 330 330 330 1 330 330 1 1 330 1 1 330 330 330 330 1 330 330 330 330 1 330 330 330 330 330 1 1 330 330 330 1 1 1 1 330 330 1 1 330 330 1 330 330 1 1 1 330 1 330 330 330 1 1 330 1 330 1 1 330 330 330 1 1 330 330 1 330 330 1 330 330 1 330 330 330 330 1 330 1 1 330 330 1 330 330 1 1 330 1 1 1 330 330 330 330 330 1 330 1 1 1 1 1 1 1 1 330 1 330 330 330 330 330 330 1 1 330 1 1 330 330 330 1 330 1 1 330 330 1 1 1 330 330 330 1 330 330 1 1 330 1 1 1 1 330 1 330 1 1 1 330 330 330 330 330 1 1 330 330 1 1 330 1 330 1 1 1 330 1 1 1 1 1 1 1 330 1 1 330 330 1 1 1 1 1 330 330 1 1 330 330 330 330 330 1 330 1 330 1 330 1 330 1 1 1 330 1 1 330 1 1 330 330 330 1 1 330 330 1 330 330 1 1 330 1 330 330 330 330 330 1 330 330 1 1 1 1 330 330 330 330 1 1 1 1 1 330 330 1 1 330 330 1 1 330 330 1 1 330 1 330 330 330 1 1 1 1 330 1 1 1 330 330 1 330 1 1 1 1 1 1 330 330 1 1 1 330 1 1 1 1 330 330 1 330 330 1 1 1 330 1 1 1 330 330 1 330 1 330 330 330 330 
 ! --------------------------------------------------------
+! All verification passed

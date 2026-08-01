@@ -4,6 +4,7 @@
 ! Upper bound is set to 118
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,51 +20,54 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 477 rows, 477 columns and 953 nonzeros (Min)
-Model fingerprint: 0x63b31ca2
+Optimize a model with 361 rows, 14519 columns and 953 nonzeros (Min)
+Model fingerprint: 0xfeaea005
 Model has 1 linear objective coefficients
-Model has 179 simple general constraints
-  179 ABS
-Variable types: 0 continuous, 477 integer (0 binary)
+Model has 415 simple general constraints
+  179 ABS, 236 INDICATOR
+Variable types: 0 continuous, 14519 integer (14042 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 1e+02]
-  RHS range        [4e+01, 6e+01]
+  RHS range        [1e+00, 6e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 343 rows and 344 columns
-Presolve time: 0.01s
-Presolved: 820 rows, 821 columns, 2168 nonzeros
-Variable types: 0 continuous, 821 integer (176 binary)
+Presolve added 591 rows and 0 columns
+Presolve removed 0 rows and 13567 columns
+Presolve time: 0.02s
+Presolved: 952 rows, 952 columns, 2790 nonzeros
+Variable types: 0 continuous, 952 integer (296 binary)
 
-Root relaxation: objective 4.000000e+01, 336 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 4.000000e+01, 409 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   40.00000    0   51          -   40.00000      -     -    0s
+     0     0   40.00000    0   61          -   40.00000      -     -    0s
 H    0     0                     118.0000000   40.00000  66.1%     -    0s
-     0     0   40.00000    0  130  118.00000   40.00000  66.1%     -    0s
-     0     0   40.00000    0  150  118.00000   40.00000  66.1%     -    0s
-     0     0   40.00000    0  296  118.00000   40.00000  66.1%     -    0s
-     0     0   40.00000    0  296  118.00000   40.00000  66.1%     -    0s
-     0     0   40.00000    0  132  118.00000   40.00000  66.1%     -    0s
-     0     0   46.50000    0  132  118.00000   46.50000  60.6%     -    0s
-     0     0   46.50000    0   97  118.00000   46.50000  60.6%     -    0s
-     0     2   46.50000    0   70  118.00000   46.50000  60.6%     -    0s
+     0     0   40.00000    0  233  118.00000   40.00000  66.1%     -    0s
+     0     0   40.00000    0  235  118.00000   40.00000  66.1%     -    0s
+     0     0   40.00000    0  407  118.00000   40.00000  66.1%     -    0s
+     0     0   40.00000    0  407  118.00000   40.00000  66.1%     -    0s
+     0     0   40.00000    0  121  118.00000   40.00000  66.1%     -    0s
+     0     0   79.00000    0  121  118.00000   79.00000  33.1%     -    0s
+     0     0   79.00000    0   87  118.00000   79.00000  33.1%     -    0s
+     0     2   79.00000    0   87  118.00000   79.00000  33.1%     -    0s
 
 Cutting planes:
-  Gomory: 51
-  Cover: 1
-  Implied bound: 258
-  Clique: 1
-  MIR: 86
-  StrongCG: 11
-  Flow cover: 14
-  Zero half: 11
-  Relax-and-lift: 33
+  Gomory: 109
+  Cover: 116
+  Implied bound: 544
+  MIR: 181
+  StrongCG: 18
+  Flow cover: 34
+  Inf proof: 10
+  Zero half: 10
+  Relax-and-lift: 52
 
-Explored 309 nodes (5254 simplex iterations) in 0.21 seconds (0.14 work units)
+Explored 2962 nodes (46786 simplex iterations) in 0.70 seconds (0.74 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 1: 118 
@@ -71,6 +75,8 @@ Solution count 1: 118
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.180000000000e+02, best bound 1.180000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 118
-! Labeling: 40 79 79 40 118 40 40 1 1 79 1 1 79 1 1 40 40 1 118 1 1 40 40 40 1 1 1 40 79 79 40 1 79 40 118 118 40 79 40 118 40 118 1 1 118 40 1 40 118 1 1 118 118 79 40 79 79 1 40 1 1 1 79 79 40 40 79 79 118 79 79 1 40 40 79 40 79 79 79 40 79 40 118 118 1 79 40 79 118 40 118 1 40 79 118 118 40 40 1 79 118 79 40 1 40 1 118 79 40 79 40 40 79 40 79 40 40 79 
+! Labeling: 1 79 40 79 79 1 1 40 40 79 79 40 40 1 79 1 118 1 40 40 40 118 1 1 40 118 40 1 79 118 79 40 117 117 79 118 79 1 79 79 118 79 118 40 40 40 40 118 40 1 40 40 118 40 79 79 79 79 1 40 40 1 118 40 79 79 40 79 40 79 79 40 40 40 40 118 79 40 117 1 79 1 118 118 79 40 40 79 40 1 118 40 79 40 118 118 40 118 1 118 79 79 79 40 1 118 118 40 79 79 1 79 117 79 79 118 118 79 
 ! --------------------------------------------------------
+! All verification passed

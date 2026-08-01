@@ -1,0 +1,73 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/cabp/B-ibm32.mtx.rnd
+! Target value is set to 6
+! Lower bound is set to 7
+! Upper bound is set to 24
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+! Target value mode is set to Cyclic Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 361 rows, 1013 columns and 2965 nonzeros (Min)
+Model fingerprint: 0x4ba2497a
+Model has 1 linear objective coefficients
+Model has 154 simple general constraints
+  90 ABS, 64 INDICATOR
+Variable types: 0 continuous, 1013 integer (800 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 273 rows and 168 columns
+Presolve time: 0.03s
+Presolved: 634 rows, 1181 columns, 3767 nonzeros
+Variable types: 0 continuous, 1181 integer (878 binary)
+
+Root relaxation: objective 1.200000e+01, 407 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   12.00000    0   67          -   12.00000      -     -    0s
+     0     0   12.00000    0  155          -   12.00000      -     -    0s
+     0     0   12.00000    0  149          -   12.00000      -     -    0s
+     0     0   12.00000    0  355          -   12.00000      -     -    0s
+     0     0   12.00000    0   85          -   12.00000      -     -    0s
+     0     0   12.00000    0   88          -   12.00000      -     -    0s
+     0     0   12.00000    0  145          -   12.00000      -     -    0s
+     0     0   12.00000    0  130          -   12.00000      -     -    0s
+     0     0   12.00000    0  129          -   12.00000      -     -    0s
+     0     0   12.00000    0  129          -   12.00000      -     -    0s
+     0     2   12.00000    0  129          -   12.00000      -     -    0s
+  3740  1356   24.00000   68   42          -   18.00000      -  35.8    5s
+H 3943   573                      24.0000000   18.00000  25.0%  34.7    5s
+
+Explored 8534 nodes (207787 simplex iterations) in 7.00 seconds (4.25 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 1: 24 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.400000000000e+01, best bound 2.400000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 24
+! Labeling: 19 1 21 9 4 10 13 23 17 3 1 11 9 5 2 7 15 1 18 10 24 13 14 22 12 16 13 15 20 8 12 6 
+! --------------------------------------------------------
+! All verification passed

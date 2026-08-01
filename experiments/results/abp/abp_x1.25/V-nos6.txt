@@ -4,6 +4,7 @@
 ! Upper bound is set to 844
 ! Time limit is set to 1800
 ! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,41 +20,55 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 3256 rows, 3256 columns and 6511 nonzeros (Min)
-Model fingerprint: 0x08a7f3c8
+Optimize a model with 2583 rows, 573631 columns and 6511 nonzeros (Min)
+Model fingerprint: 0xd7d08a82
 Model has 1 linear objective coefficients
-Model has 1290 simple general constraints
-  1290 ABS
-Variable types: 0 continuous, 3256 integer (0 binary)
+Model has 2640 simple general constraints
+  1290 ABS, 1350 INDICATOR
+Variable types: 0 continuous, 573631 integer (570375 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 1e+00]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 8e+02]
-  RHS range        [4e+02, 4e+02]
+  RHS range        [1e+00, 4e+02]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 0 rows and 1290 columns
-Presolve removed 1 rows and 0 columns
-Presolve time: 0.02s
-Presolved: 3255 rows, 4546 columns, 10380 nonzeros
+Presolve added 6688 rows and 0 columns
+Presolve removed 0 rows and 563745 columns
+Presolve time: 0.13s
+Presolved: 9271 rows, 9886 columns, 24435 nonzeros
 Presolved model has 1290 SOS constraint(s)
-Variable types: 0 continuous, 4546 integer (0 binary)
+Variable types: 0 continuous, 9886 integer (2700 binary)
+Found heuristic solution: objective 844.0000000
+Found heuristic solution: objective 843.0000000
+Found heuristic solution: objective 422.0000000
+Performing another presolve...
+Presolve removed 4665 rows and 4665 columns
+Presolve time: 0.07s
+Found heuristic solution: objective 421.0000000
+Found heuristic solution: objective 420.0000000
+Found heuristic solution: objective 419.0000000
 
-Root relaxation: objective 4.120000e+02, 1302 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 4.120000e+02, 2576 iterations, 0.01 seconds (0.01 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0  412.00000    0 1185          -  412.00000      -     -    0s
-H    0     0                     412.0000000  412.00000  0.00%     -    0s
+     0     0  412.00000    0  872  419.00000  412.00000  1.67%     -    4s
+H    0     0                     412.0000000  412.00000  0.00%     -    4s
+     0     0  412.00000    0  872  412.00000  412.00000  0.00%     -    4s
 
-Explored 1 nodes (1302 simplex iterations) in 0.07 seconds (0.04 work units)
+Explored 1 nodes (2576 simplex iterations) in 4.57 seconds (2.49 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 1: 412 
+Solution count 7: 412 419 420 ... 844
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.120000000000e+02, best bound 4.120000000000e+02, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 412
 ! Labeling: 412 412 412 1 412 1 1 412 412 1 1 412 1 1 1 412 1 412 1 412 412 1 412 1 412 412 1 1 412 1 412 412 1 1 1 412 1 412 412 1 412 1 412 1 412 412 1 412 412 1 412 412 412 1 1 1 1 412 1 1 412 1 1 412 412 1 1 1 1 412 412 412 412 1 1 412 412 412 1 412 412 1 1 1 412 1 1 1 1 412 412 412 1 412 1 1 412 412 412 412 1 412 412 412 412 412 412 1 412 412 412 412 412 412 412 1 412 1 1 1 1 412 1 1 412 412 412 1 1 1 412 412 412 1 412 1 1 412 412 1 1 412 412 1 1 1 412 412 1 412 1 412 1 412 1 1 412 412 412 1 1 1 1 1 412 412 1 412 412 1 1 1 412 1 1 412 412 412 412 412 412 1 1 1 412 1 1 1 412 1 1 1 1 412 1 1 1 412 412 412 1 1 1 1 412 1 1 1 1 1 1 1 1 1 1 412 412 412 1 412 412 1 1 412 412 1 1 1 412 412 412 1 1 1 1 412 1 412 1 412 412 412 412 412 1 412 412 1 1 412 1 1 412 412 412 412 412 412 412 412 1 412 1 412 1 412 412 412 412 412 1 1 1 412 1 412 412 412 1 1 412 1 1 412 1 1 1 1 1 412 412 1 412 1 412 1 1 1 1 1 412 412 1 412 1 1 1 412 1 412 412 412 1 412 412 1 1 1 1 412 1 1 1 412 412 1 412 1 412 412 412 412 1 1 412 412 412 412 1 1 412 1 412 412 412 1 412 412 1 412 1 412 412 1 1 412 412 412 412 412 1 1 412 412 412 1 412 412 1 1 412 1 1 412 412 412 412 1 412 412 412 412 1 412 412 412 412 412 1 1 412 412 412 1 1 1 1 412 412 1 1 412 412 1 412 412 1 1 1 412 1 412 412 412 1 1 412 1 412 1 1 412 412 412 1 1 412 412 1 412 412 1 412 412 1 412 412 412 412 1 412 1 1 412 412 1 412 412 1 1 412 1 1 1 412 412 412 412 412 1 412 1 1 1 1 1 1 1 1 412 1 412 412 412 412 412 412 1 1 412 1 1 412 412 412 1 412 1 1 412 412 1 1 1 412 412 412 1 412 412 1 1 412 1 1 1 1 412 1 412 1 1 1 412 412 412 412 412 1 1 412 412 1 1 412 1 412 1 1 1 412 1 1 1 1 1 1 1 412 1 1 412 412 1 1 1 1 1 412 412 1 1 412 412 412 412 412 1 412 1 412 1 412 1 412 1 1 1 412 1 1 412 1 1 412 412 412 1 1 412 412 1 412 412 1 1 412 1 412 412 412 412 412 1 412 412 1 1 1 1 412 412 412 412 1 1 1 1 1 412 412 1 1 412 412 1 1 412 412 1 1 412 1 412 412 412 1 1 1 1 412 1 1 1 412 412 1 412 1 1 1 1 1 1 412 412 1 1 1 412 1 1 1 1 412 412 1 412 412 1 1 1 412 1 1 1 412 412 1 412 1 412 412 412 412 
 ! --------------------------------------------------------
+! All verification passed

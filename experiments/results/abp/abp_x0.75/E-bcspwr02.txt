@@ -4,6 +4,7 @@
 ! Upper bound is set to 36
 ! Time limit is set to 1800
 ! Vertices mode is set to No hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,48 +20,57 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 302 rows, 1932 columns and 5712 nonzeros (Min)
-Model fingerprint: 0x2a02543b
+Optimize a model with 255 rows, 1981 columns and 5712 nonzeros (Min)
+Model fingerprint: 0xe873add6
 Model has 1 linear objective coefficients
-Model has 59 simple general constraints
-  59 ABS
-Variable types: 0 continuous, 1932 integer (1764 binary)
+Model has 157 simple general constraints
+  59 ABS, 98 INDICATOR
+Variable types: 0 continuous, 1981 integer (1813 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 4e+01]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 4e+01]
   RHS range        [1e+00, 4e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 100 rows and 3 columns
-Presolve time: 0.03s
-Presolved: 402 rows, 1935 columns, 5765 nonzeros
-Variable types: 0 continuous, 1935 integer (1725 binary)
+Presolve added 213 rows and 19 columns
+Presolve time: 0.04s
+Presolved: 468 rows, 2000 columns, 6005 nonzeros
+Variable types: 0 continuous, 2000 integer (1773 binary)
 
-Root relaxation: objective 1.600000e+01, 271 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 1.600000e+01, 331 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   16.00000    0   81          -   16.00000      -     -    0s
-     0     0   16.00000    0  135          -   16.00000      -     -    0s
-     0     0   16.00000    0  138          -   16.00000      -     -    0s
-     0     0   16.00000    0  269          -   16.00000      -     -    0s
-     0     0   16.00000    0  274          -   16.00000      -     -    0s
-     0     0   16.00000    0  122          -   16.00000      -     -    0s
-     0     0   16.00000    0  122          -   16.00000      -     -    0s
-     0     0   16.00000    0   94          -   16.00000      -     -    0s
-     0     2   16.00000    0   94          -   16.00000      -     -    0s
-H  437   223                      32.0000000   16.00000  50.0%  42.2    1s
-H 1659   822                      31.0000000   18.00000  41.9%  29.6    1s
+     0     0   16.00000    0   93          -   16.00000      -     -    0s
+     0     0   16.00000    0  266          -   16.00000      -     -    0s
+     0     0   16.00000    0  261          -   16.00000      -     -    0s
+     0     0   16.00000    0  221          -   16.00000      -     -    0s
+     0     0   16.00000    0  218          -   16.00000      -     -    0s
+     0     0   16.00000    0  192          -   16.00000      -     -    0s
+     0     0   16.00000    0  192          -   16.00000      -     -    0s
+     0     0   16.00000    0  139          -   16.00000      -     -    0s
+     0     2   17.00000    0  105          -   17.00000      -     -    0s
+H  732   489                      36.0000000   17.00000  52.8%  36.8    1s
+H 1648   971                      35.0000000   21.00000  40.0%  38.7    2s
+H 1806   953                      34.0000000   21.00000  38.2%  37.0    2s
+H 2452   809                      33.0000000   21.00000  36.4%  33.8    3s
+H 4332  1088                      32.0000000   21.00000  34.4%  28.6    4s
+  6754  2364   31.00000   98   74   32.00000   21.00000  34.4%  25.7    5s
+H 7955   581                      31.0000000   21.00000  32.3%  26.1    5s
 
-Explored 1757 nodes (52532 simplex iterations) in 1.90 seconds (2.19 work units)
+Explored 8614 nodes (215928 simplex iterations) in 5.69 seconds (5.89 work units)
 Thread count was 8 (of 8 available processors)
 
-Solution count 2: 31 32 
+Solution count 6: 31 32 33 ... 36
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.100000000000e+01, best bound 3.100000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 31
-! Labeling: 23 18 21 1 29 15 16 13 20 2 5 30 14 17 16 1 1 1 31 7 11 6 8 16 22 16 31 16 4 19 22 1 1 9 31 12 10 24 28 31 26 31 1 3 25 1 31 27 25 
+! Labeling: 1 23 26 1 21 27 16 4 28 8 9 30 12 31 31 1 1 1 16 6 10 14 2 17 25 31 31 16 16 24 1 1 2 3 15 13 11 18 19 29 20 1 1 7 22 5 31 29 31 
 ! --------------------------------------------------------
+! All verification passed

@@ -1,0 +1,100 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/cabp/A-pores_1.mtx.rnd
+! Target value is set to 4
+! Lower bound is set to 5
+! Upper bound is set to 22
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+! Target value mode is set to Cyclic Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 394 rows, 927 columns and 2711 nonzeros (Min)
+Model fingerprint: 0xd310b7a2
+Model has 1 linear objective coefficients
+Model has 163 simple general constraints
+  103 ABS, 60 INDICATOR
+Variable types: 0 continuous, 927 integer (690 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 294 rows and 195 columns
+Presolve time: 0.02s
+Presolved: 688 rows, 1122 columns, 3600 nonzeros
+Variable types: 0 continuous, 1122 integer (782 binary)
+
+Root relaxation: objective 8.000000e+00, 380 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    8.00000    0   97          -    8.00000      -     -    0s
+     0     0    8.00000    0  263          -    8.00000      -     -    0s
+     0     0    8.00000    0  255          -    8.00000      -     -    0s
+     0     0    8.00000    0  367          -    8.00000      -     -    0s
+     0     0    8.00000    0  133          -    8.00000      -     -    0s
+     0     0    8.00000    0  132          -    8.00000      -     -    0s
+     0     0    8.00000    0  128          -    8.00000      -     -    0s
+     0     2    8.00000    0  128          -    8.00000      -     -    0s
+* 3016  1152              96      22.0000000   12.00000  45.5%  29.6    3s
+* 3780  1155              79      21.0000000   12.00000  42.9%  27.5    4s
+H 3896  1113                      20.0000000   12.00000  40.0%  27.2    4s
+  5053  1685 infeasible   20        20.00000   12.00000  40.0%  23.2    5s
+H 5162  1533                      19.0000000   12.00000  36.8%  23.6    5s
+H 5452  1335                      18.0000000   12.00000  33.3%  23.2    5s
+ 19118  4107 infeasible   79        18.00000   16.00000  11.1%  16.6   10s
+ 29833  5877 infeasible   45        18.00000   16.00000  11.1%  16.3   15s
+ 38371  6812 infeasible   51        18.00000   16.00000  11.1%  16.8   20s
+ 50557  7431 infeasible   59        18.00000   16.00000  11.1%  15.9   25s
+ 67167 11200   16.00000   51  145   18.00000   16.00000  11.1%  15.7   30s
+ 83118 14278 infeasible   81        18.00000   16.00000  11.1%  15.3   35s
+ 99082 13332   17.00000   46  100   18.00000   16.00000  11.1%  15.2   40s
+ 113278 13837 infeasible   48        18.00000   16.00000  11.1%  15.5   45s
+ 120380 13439 infeasible   71        18.00000   16.00000  11.1%  15.8   50s
+ 121985 11777 infeasible   53        18.00000   16.00000  11.1%  16.2   55s
+ 130407  4091 infeasible   87        18.00000   17.00000  5.56%  16.6   60s
+ 151482  3321 infeasible   64        18.00000   17.00000  5.56%  16.1   65s
+ 173919  2815 infeasible   69        18.00000   17.00000  5.56%  15.5   70s
+ 189355  3456   17.00000   46  135   18.00000   17.00000  5.56%  15.3   75s
+ 213557  1577 infeasible   42        18.00000   17.00000  5.56%  14.8   80s
+ 231071  1621   17.00000   42   86   18.00000   17.00000  5.56%  14.8   85s
+ 245686   159 infeasible   41        18.00000   17.00000  5.56%  14.7   90s
+
+Cutting planes:
+  Cover: 1
+  Implied bound: 77
+  MIR: 9
+  StrongCG: 8
+  Flow cover: 11
+  GUB cover: 16
+  Zero half: 10
+
+Explored 248196 nodes (3665849 simplex iterations) in 91.71 seconds (49.89 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 18 19 20 ... 22
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.800000000000e+01, best bound 1.800000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 18
+! Labeling: 2 7 18 13 12 10 11 4 18 6 15 10 8 12 14 18 17 6 14 5 2 8 14 11 3 1 9 4 16 10 
+! --------------------------------------------------------
+! All verification passed

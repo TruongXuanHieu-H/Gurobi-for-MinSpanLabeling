@@ -4,6 +4,7 @@
 ! Upper bound is set to 40
 ! Time limit is set to 1800
 ! Vertices mode is set to No hole
+! Target value mode is set to Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
 Set parameter LicenseID to value 2663665
@@ -19,43 +20,69 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 451 rows, 2463 columns and 7179 nonzeros (Min)
-Model fingerprint: 0x7ef9aee2
+Optimize a model with 399 rows, 2517 columns and 7179 nonzeros (Min)
+Model fingerprint: 0x9cce4b5d
 Model has 1 linear objective coefficients
-Model has 124 simple general constraints
-  124 ABS
-Variable types: 0 continuous, 2463 integer (2160 binary)
+Model has 232 simple general constraints
+  124 ABS, 108 INDICATOR
+Variable types: 0 continuous, 2517 integer (2214 binary)
 Coefficient statistics:
   Matrix range     [1e+00, 4e+01]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 4e+01]
   RHS range        [1e+00, 4e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
 
-Presolve added 247 rows and 228 columns
-Presolve time: 0.02s
-Presolved: 698 rows, 2691 columns, 7922 nonzeros
-Variable types: 0 continuous, 2691 integer (2264 binary)
+Presolve added 408 rows and 228 columns
+Presolve time: 0.03s
+Presolved: 807 rows, 2745 columns, 8354 nonzeros
+Variable types: 0 continuous, 2745 integer (2318 binary)
 
-Root relaxation: objective 1.000000e+01, 395 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 1.000000e+01, 520 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0   10.00000    0   83          -   10.00000      -     -    0s
-     0     0   10.00000    0  371          -   10.00000      -     -    0s
-     0     0   10.00000    0  325          -   10.00000      -     -    0s
-     0     0   10.00000    0  444          -   10.00000      -     -    0s
-     0     0   10.00000    0  259          -   10.00000      -     -    0s
-     0     0   10.00000    0  259          -   10.00000      -     -    0s
-     0     0   10.00000    0  103          -   10.00000      -     -    0s
-     0     2   10.00000    0  101          -   10.00000      -     -    0s
-H 1155   781                      39.0000000   19.00000  51.3%  32.8    1s
-H 1495   983                      38.0000000   19.00000  50.0%  40.3    2s
-H 1863  1110                      37.0000000   19.00000  48.6%  43.4    3s
-  4593   526 infeasible  115        37.00000   29.00000  21.6%  32.9    5s
- 16061  1772   33.00000   40  186   37.00000   33.00000  10.8%  18.3   10s
+     0     0   10.00000    0   92          -   10.00000      -     -    0s
+     0     0   10.00000    0  436          -   10.00000      -     -    0s
+     0     0   10.00000    0  368          -   10.00000      -     -    0s
+     0     0   10.00000    0  502          -   10.00000      -     -    0s
+     0     0   10.00000    0  158          -   10.00000      -     -    0s
+     0     0   10.00000    0  158          -   10.00000      -     -    0s
+     0     0   10.00000    0  125          -   10.00000      -     -    0s
+     0     2   10.00000    0  123          -   10.00000      -     -    0s
+  1852  1135   37.00000   39  205          -   10.00000      -  51.2    5s
+H 2735  1343                      39.0000000   10.04327  74.2%  56.4    8s
+H 3025  1386                      38.0000000   10.04327  73.6%  55.5    9s
+  4128  1854   37.00000   35  185   38.00000   11.00000  71.1%  49.7   10s
+ 14854 11861   37.00000   49  152   38.00000   20.00000  47.4%  31.0   15s
+ 28830 20471   37.00000   62  166   38.00000   28.00000  26.3%  25.6   20s
+ 40888 29640 infeasible   66        38.00000   28.00000  26.3%  23.0   25s
+ 45649 33277   28.00000   39  309   38.00000   28.00000  26.3%  23.3   30s
+*47768 31709             198      37.0000000   28.00000  24.3%  23.6   32s
+ 52676 31798 infeasible   60        37.00000   28.00000  24.3%  23.1   35s
+ 63805 30477   31.00000   50  226   37.00000   30.00000  18.9%  21.5   40s
+ 84751 24736 infeasible  113        37.00000   32.00000  13.5%  18.5   45s
+ 103325 19845   33.00000   84  136   37.00000   33.00000  10.8%  17.1   50s
+ 119729 13738 infeasible  171        37.00000   33.00000  10.8%  16.5   55s
+ 122672 12913   36.00000   56  270   37.00000   33.00000  10.8%  16.4   60s
 
-Explored 29034 nodes (391870 simplex iterations) in 12.26 seconds (12.61 work units)
+Cutting planes:
+  Gomory: 24
+  Cover: 137
+  Implied bound: 125
+  Projected implied bound: 6
+  Clique: 5
+  MIR: 119
+  StrongCG: 65
+  Flow cover: 291
+  GUB cover: 113
+  Zero half: 28
+  Network: 12
+  Relax-and-lift: 123
+
+Explored 122674 nodes (2028911 simplex iterations) in 60.55 seconds (59.25 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 3: 37 38 39 
@@ -63,6 +90,8 @@ Solution count 3: 37 38 39
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.700000000000e+01, best bound 3.700000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
+! Status: OPTIMAL
 ! Best span = 37
-! Labeling: 37 31 28 9 12 37 3 20 26 18 28 37 28 5 4 37 37 1 23 32 34 33 22 8 10 30 14 1 2 35 24 10 29 27 11 1 19 10 1 36 21 16 17 1 10 6 19 13 37 25 28 7 15 19 
+! Labeling: 28 27 37 14 26 25 1 8 4 3 1 10 10 33 16 11 1 9 25 35 29 31 13 34 28 10 5 20 36 23 22 10 17 24 32 1 19 30 37 6 18 34 21 1 37 33 19 36 33 15 2 10 7 12 
 ! --------------------------------------------------------
+! All verification passed
