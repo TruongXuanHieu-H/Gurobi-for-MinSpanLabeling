@@ -1,0 +1,92 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/J-nos4.mtx.rnd
+! Target value is set to 17
+! Lower bound is set to 18
+! Upper bound is set to 50
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 697 rows, 5695 columns and 11289 nonzeros (Min)
+Model fingerprint: 0x2309bd1a
+Model has 1 linear objective coefficients
+Model has 447 simple general constraints
+  247 ABS, 200 INDICATOR
+Variable types: 0 continuous, 5695 integer (5100 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 5e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 793 rows and 456 columns
+Presolve time: 0.09s
+Presolved: 1490 rows, 6151 columns, 13741 nonzeros
+Variable types: 0 continuous, 6151 integer (5309 binary)
+
+Root relaxation: objective 1.800000e+01, 985 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   18.00000    0  151          -   18.00000      -     -    0s
+     0     0   18.00000    0  785          -   18.00000      -     -    0s
+     0     0   18.00000    0  629          -   18.00000      -     -    0s
+     0     0   18.00000    0  693          -   18.00000      -     -    0s
+     0     0   18.00000    0  693          -   18.00000      -     -    0s
+     0     0   18.00000    0  693          -   18.00000      -     -    0s
+     0     0   18.00000    0  693          -   18.00000      -     -    0s
+     0     0   18.00000    0  669          -   18.00000      -     -    0s
+     0     0   18.00000    0  417          -   18.00000      -     -    0s
+     0     0   18.00000    0  417          -   18.00000      -     -    0s
+     0     0   18.00000    0  388          -   18.00000      -     -    0s
+     0     2   18.00000    0  387          -   18.00000      -     -    1s
+  1372   907   35.00000   69  362          -   18.00000      -  33.6    5s
+H 1374   863                      49.0000000   18.17727  62.9%  33.6    6s
+H 1375   820                      48.0000000   19.00000  60.4%  33.5    6s
+H 1375   778                      35.0000000   19.00000  45.7%  33.5    6s
+
+Cutting planes:
+  Gomory: 5
+  Cover: 196
+  Implied bound: 252
+  Projected implied bound: 2
+  Clique: 22
+  MIR: 70
+  StrongCG: 50
+  Flow cover: 250
+  GUB cover: 127
+  Zero half: 10
+  Network: 33
+  RLT: 5
+  Relax-and-lift: 74
+  BQP: 1
+
+Explored 1375 nodes (62973 simplex iterations) in 6.20 seconds (3.78 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 35 48 49 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.500000000000e+01, best bound 3.500000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 35
+! Labeling: 18 18 18 18 18 35 1 18 35 1 35 35 18 1 35 18 18 1 1 35 1 1 1 1 1 18 1 35 35 35 1 18 1 35 18 1 35 18 35 18 18 18 18 35 1 18 35 18 1 35 1 18 18 1 1 35 1 35 18 35 18 1 18 35 18 35 35 1 1 35 18 1 18 35 35 1 1 1 1 18 1 18 18 18 3 35 35 1 35 18 18 1 35 35 1 18 35 1 21 35 
+! --------------------------------------------------------
+! All verification passed

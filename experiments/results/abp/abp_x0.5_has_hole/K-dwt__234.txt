@@ -1,0 +1,93 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/K-dwt__234.mtx.rnd
+! Target value is set to 25
+! Lower bound is set to 26
+! Upper bound is set to 58
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 561 rows, 7345 columns and 14572 nonzeros (Min)
+Model fingerprint: 0xf4026a4f
+Model has 1 linear objective coefficients
+Model has 396 simple general constraints
+  162 ABS, 234 INDICATOR
+Variable types: 0 continuous, 7345 integer (6903 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+01]
+  RHS range        [1e+00, 3e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 674 rows and 248 columns
+Presolve time: 0.11s
+Presolved: 1235 rows, 7593 columns, 16489 nonzeros
+Variable types: 0 continuous, 7593 integer (6989 binary)
+
+Root relaxation: objective 2.600000e+01, 811 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.00000    0  170          -   26.00000      -     -    0s
+     0     0   26.00000    0  701          -   26.00000      -     -    0s
+     0     0   26.00000    0  701          -   26.00000      -     -    0s
+     0     0   26.00000    0  701          -   26.00000      -     -    0s
+     0     0   26.00000    0  564          -   26.00000      -     -    0s
+     0     0   26.00000    0  559          -   26.00000      -     -    0s
+     0     0   26.00000    0  686          -   26.00000      -     -    0s
+     0     0   26.00000    0  678          -   26.00000      -     -    0s
+     0     0   26.00000    0  407          -   26.00000      -     -    0s
+     0     0   26.00000    0  404          -   26.00000      -     -    0s
+     0     0   26.00000    0  272          -   26.00000      -     -    0s
+     0     2   26.00000    0  247          -   26.00000      -     -    1s
+*  916   407             227      57.0000000   26.00000  54.4%  15.2    1s
+H 1224   517                      56.0000000   26.00000  53.6%  13.8    2s
+H 1290   539                      53.0000000   26.00000  50.9%  13.5    2s
+H 1428   575                      52.0000000   26.00000  50.0%  12.6    2s
+H 1522   536                      51.0000000   26.00000  49.0%  11.9    4s
+  1524   539   26.00000   10  127   51.00000   26.00000  49.0%  17.5    5s
+
+Cutting planes:
+  Gomory: 38
+  Cover: 88
+  Implied bound: 73
+  Projected implied bound: 1
+  Clique: 13
+  MIR: 55
+  StrongCG: 45
+  Flow cover: 192
+  GUB cover: 60
+  Zero half: 14
+  Network: 6
+  Relax-and-lift: 75
+  PSD: 1
+
+Explored 1546 nodes (34387 simplex iterations) in 5.26 seconds (3.43 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 51 52 53 ... 57
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.100000000000e+01, best bound 5.100000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 51
+! Labeling: 26 26 1 1 26 26 1 51 1 1 1 51 26 1 1 1 1 1 1 1 10 26 1 1 1 1 1 50 51 1 1 1 26 51 26 1 51 51 26 51 26 1 1 1 51 51 51 51 1 26 1 51 51 1 51 26 1 1 51 29 26 31 51 1 26 1 26 1 1 50 1 26 26 1 51 37 1 1 26 1 26 1 1 26 1 26 1 1 26 1 1 26 51 1 1 1 51 51 1 51 51 51 1 1 1 51 1 51 1 26 51 26 1 26 1 1 1 
+! --------------------------------------------------------
+! All verification passed

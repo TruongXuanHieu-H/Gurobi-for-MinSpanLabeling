@@ -1,0 +1,97 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/K-dwt__234.mtx.rnd
+! Target value is set to 38
+! Lower bound is set to 39
+! Upper bound is set to 87
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 561 rows, 10738 columns and 21358 nonzeros (Min)
+Model fingerprint: 0x320e8149
+Model has 1 linear objective coefficients
+Model has 396 simple general constraints
+  162 ABS, 234 INDICATOR
+Variable types: 0 continuous, 10738 integer (10296 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 9e+01]
+  RHS range        [1e+00, 4e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 674 rows and 230 columns
+Presolve time: 0.14s
+Presolved: 1235 rows, 10968 columns, 23239 nonzeros
+Variable types: 0 continuous, 10968 integer (10364 binary)
+
+Root relaxation: objective 3.900000e+01, 777 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   39.00000    0  239          -   39.00000      -     -    0s
+     0     0   39.00000    0  239          -   39.00000      -     -    0s
+     0     0   39.00000    0  588          -   39.00000      -     -    0s
+     0     0   39.00000    0  551          -   39.00000      -     -    0s
+     0     0   39.00000    0  571          -   39.00000      -     -    0s
+     0     0   39.00000    0  552          -   39.00000      -     -    0s
+     0     0   39.00000    0  468          -   39.00000      -     -    0s
+     0     0   39.00000    0  201          -   39.00000      -     -    1s
+     0     0   39.00000    0  496          -   39.00000      -     -    1s
+     0     0   39.00000    0  462          -   39.00000      -     -    1s
+     0     0   39.00000    0  487          -   39.00000      -     -    1s
+     0     0   39.00000    0  175          -   39.00000      -     -    1s
+     0     0   39.00000    0  274          -   39.00000      -     -    1s
+     0     0   39.00000    0  395          -   39.00000      -     -    1s
+     0     0   39.00000    0  197          -   39.00000      -     -    1s
+     0     0   39.00000    0  196          -   39.00000      -     -    1s
+     0     0   39.00000    0  153          -   39.00000      -     -    2s
+     0     2   39.00000    0  144          -   39.00000      -     -    2s
+H  739   329                      78.0000000   39.00000  50.0%  13.5    3s
+H 1580   223                      77.0000000   39.00000  49.4%   8.0    4s
+  1847   327   64.00000   10  299   77.00000   39.00000  49.4%  12.3    5s
+
+Cutting planes:
+  Gomory: 27
+  Cover: 77
+  Implied bound: 123
+  Clique: 59
+  MIR: 102
+  StrongCG: 76
+  Flow cover: 284
+  GUB cover: 36
+  Zero half: 16
+  Network: 28
+  RLT: 2
+  Relax-and-lift: 92
+  BQP: 1
+  PSD: 2
+
+Explored 1980 nodes (39281 simplex iterations) in 7.69 seconds (5.42 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 77 78 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.700000000000e+01, best bound 7.700000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 77
+! Labeling: 1 1 39 1 39 13 39 77 77 39 77 1 1 77 39 77 1 77 39 77 1 1 39 77 77 77 39 39 77 1 39 1 1 77 1 39 77 39 39 77 1 77 77 1 1 39 39 1 1 39 53 77 77 1 77 1 1 77 39 1 1 1 39 1 39 77 70 77 77 39 77 77 39 77 1 39 1 1 39 77 39 77 77 39 1 77 1 39 1 1 77 39 39 1 39 77 55 77 1 77 77 77 77 39 1 39 1 77 77 1 39 39 1 39 1 1 43 
+! --------------------------------------------------------
+! All verification passed

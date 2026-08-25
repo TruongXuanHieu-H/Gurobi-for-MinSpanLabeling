@@ -1,0 +1,92 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/I-ash85.mtx.rnd
+! Target value is set to 11
+! Lower bound is set to 12
+! Upper bound is set to 42
+! Time limit is set to 1800
+! Vertices mode is set to Has hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 611 rows, 4179 columns and 8272 nonzeros (Min)
+Model fingerprint: 0xcdef7ef0
+Model has 1 linear objective coefficients
+Model has 389 simple general constraints
+  219 ABS, 170 INDICATOR
+Variable types: 0 continuous, 4179 integer (3655 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+01]
+  RHS range        [1e+00, 2e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 692 rows and 415 columns
+Presolve time: 0.06s
+Presolved: 1303 rows, 4594 columns, 10438 nonzeros
+Variable types: 0 continuous, 4594 integer (3851 binary)
+
+Root relaxation: objective 1.200000e+01, 846 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   12.00000    0  182          -   12.00000      -     -    0s
+     0     0   12.00000    0  753          -   12.00000      -     -    0s
+     0     0   12.00000    0  715          -   12.00000      -     -    0s
+     0     0   12.00000    0  634          -   12.00000      -     -    0s
+     0     0   12.00000    0  735          -   12.00000      -     -    0s
+     0     0   12.00000    0  732          -   12.00000      -     -    0s
+     0     0   12.00000    0  269          -   12.00000      -     -    0s
+     0     0   12.00000    0  268          -   12.00000      -     -    0s
+     0     0   12.00000    0  257          -   12.00000      -     -    0s
+     0     2   12.00000    0  237          -   12.00000      -     -    1s
+  1280   874   34.00000   66  842          -   12.01911      -  31.6    5s
+  1298   887   34.00000   44  294          -   13.00000      -  47.6   10s
+  2592  1472   34.00000   90  113          -   13.00000      -  38.0   15s
+  5047  3024   41.00000  128   73          -   13.00000      -  25.7   20s
+H 5338  2055                      36.0000000   13.00000  63.9%  24.6   20s
+* 6719  2336             212      35.0000000   14.00000  60.0%  21.8   21s
+* 8944  3186             250      34.0000000   15.00000  55.9%  18.3   22s
+
+Cutting planes:
+  Learned: 4
+  Gomory: 23
+  Cover: 57
+  Implied bound: 74
+  Clique: 3
+  MIR: 44
+  StrongCG: 39
+  Flow cover: 146
+  GUB cover: 34
+  Zero half: 7
+  Network: 4
+  RLT: 1
+  Relax-and-lift: 24
+
+Explored 13384 nodes (192676 simplex iterations) in 23.87 seconds (11.78 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 34 35 36 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.400000000000e+01, best bound 3.400000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 34
+! Labeling: 23 34 1 12 12 34 12 1 23 33 12 1 1 12 34 1 1 1 12 34 34 1 1 23 12 23 23 23 12 12 1 1 1 1 12 12 13 34 23 31 1 31 1 1 26 34 12 34 1 1 12 23 12 30 34 34 23 13 34 34 34 34 23 1 34 12 23 23 23 23 1 23 23 1 34 12 12 34 12 1 12 23 12 23 34 
+! --------------------------------------------------------
+! All verification passed
