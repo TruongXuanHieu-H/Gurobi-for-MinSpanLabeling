@@ -1,0 +1,101 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/K-dwt__234.mtx.rnd
+! Target value is set to 25
+! Lower bound is set to 26
+! Upper bound is set to 58
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: AMD EPYC 7B12, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 619 rows, 7345 columns and 21416 nonzeros (Min)
+Model fingerprint: 0x6fdced2c
+Model has 1 linear objective coefficients
+Model has 396 simple general constraints
+  162 ABS, 234 INDICATOR
+Variable types: 0 continuous, 7345 integer (6903 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 6e+01]
+  RHS range        [1e+00, 6e+01]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 673 rows and 262 columns
+Presolve time: 0.09s
+Presolved: 1292 rows, 7607 columns, 23156 nonzeros
+Variable types: 0 continuous, 7607 integer (7003 binary)
+
+Root relaxation: objective 2.600000e+01, 874 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   26.00000    0  190          -   26.00000      -     -    0s
+     0     0   26.00000    0  213          -   26.00000      -     -    0s
+     0     0   26.00000    0  755          -   26.00000      -     -    0s
+     0     0   26.00000    0  643          -   26.00000      -     -    0s
+     0     0   26.00000    0  643          -   26.00000      -     -    0s
+     0     0   26.00000    0  643          -   26.00000      -     -    0s
+     0     0   26.00000    0  642          -   26.00000      -     -    0s
+     0     0   26.00000    0  643          -   26.00000      -     -    0s
+     0     0   26.00000    0  642          -   26.00000      -     -    0s
+     0     0   26.00000    0  650          -   26.00000      -     -    0s
+     0     0   26.00000    0  711          -   26.00000      -     -    0s
+     0     0   26.00000    0  705          -   26.00000      -     -    0s
+     0     0   26.00000    0  705          -   26.00000      -     -    0s
+     0     0   26.00000    0  705          -   26.00000      -     -    0s
+     0     0   26.00000    0  310          -   26.00000      -     -    0s
+     0     0   26.00000    0  319          -   26.00000      -     -    0s
+     0     0   26.00000    0  263          -   26.00000      -     -    0s
+     0     2   26.00000    0  235          -   26.00000      -     -    1s
+  1034   715   51.00000  150  255          -   26.00000      -  41.4    5s
+  1467   952   51.00000   17  303          -   26.00000      -  67.5   10s
+  2509  1152   55.00000  195  232          -   26.00000      -  60.8   15s
+H 2549   897                      57.0000000   26.00000  54.4%  60.6   15s
+H 2565   687                      55.0000000   26.00000  52.7%  63.2   16s
+H 2603   646                      54.0000000   26.00000  51.9%  62.9   16s
+H 2852   617                      53.0000000   26.00000  50.9%  62.5   19s
+  2873   678   51.00000   41  307   53.00000   26.00000  50.9%  62.7   20s
+H 3000   559                      52.0000000   26.00000  50.0%  60.6   20s
+H 3691   300                      51.0000000   26.00000  49.0%  55.3   21s
+
+Cutting planes:
+  Gomory: 22
+  Cover: 29
+  Implied bound: 61
+  Clique: 1
+  MIR: 74
+  StrongCG: 34
+  Flow cover: 162
+  GUB cover: 69
+  Zero half: 9
+  Network: 3
+  Relax-and-lift: 61
+
+Explored 3982 nodes (216305 simplex iterations) in 21.91 seconds (31.59 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 6: 51 52 53 ... 57
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.100000000000e+01, best bound 5.100000000000e+01, gap 0.0000%
+! --------------------------------------------------------
+! Status: OPTIMAL
+! Best span = 51
+! Labeling: 51 16 18 26 51 1 51 29 26 1 31 1 1 1 3 43 1 26 42 49 24 1 13 15 1 6 8 1 51 14 36 33 9 51 51 2 51 1 1 26 1 12 1 17 1 10 1 36 46 51 37 51 1 51 20 26 1 34 26 1 38 51 26 22 47 40 48 26 50 51 32 5 44 26 10 1 23 1 51 39 1 2 41 8 4 51 21 27 26 26 25 1 1 19 51 26 51 51 51 11 1 26 35 26 26 51 26 1 30 51 51 7 45 26 26 1 28 
+! --------------------------------------------------------
+! All verification passed

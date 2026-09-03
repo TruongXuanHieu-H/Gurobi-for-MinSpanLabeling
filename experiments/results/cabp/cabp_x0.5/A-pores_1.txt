@@ -3,7 +3,7 @@
 ! Lower bound is set to 4
 ! Upper bound is set to 15
 ! Time limit is set to 1800
-! Vertices mode is set to No hole
+! Vertices mode is set to Has hole
 ! Target value mode is set to Cyclic Antibandwidth
 Set parameter WLSAccessID
 Set parameter WLSSecret
@@ -20,8 +20,8 @@ Non-default parameters:
 TimeLimit  1800
 
 Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
-Optimize a model with 387 rows, 717 columns and 2074 nonzeros (Min)
-Model fingerprint: 0x93118676
+Optimize a model with 372 rows, 717 columns and 1609 nonzeros (Min)
+Model fingerprint: 0xb87a3175
 Model has 1 linear objective coefficients
 Model has 163 simple general constraints
   103 ABS, 60 INDICATOR
@@ -30,36 +30,49 @@ Coefficient statistics:
   Matrix range     [1e+00, 2e+01]
   Objective range  [1e+00, 1e+00]
   Bounds range     [1e+00, 2e+01]
-  RHS range        [1e+00, 1e+01]
+  RHS range        [1e+00, 8e+00]
   GenCon rhs range [1e+00, 1e+00]
   GenCon coe range [1e+00, 1e+00]
 
-Presolve added 264 rows and 199 columns
-Presolve time: 0.02s
-Presolved: 651 rows, 916 columns, 2887 nonzeros
+Presolve added 265 rows and 199 columns
+Presolve time: 0.03s
+Presolved: 637 rows, 916 columns, 2465 nonzeros
 Variable types: 0 continuous, 916 integer (576 binary)
 
-Root relaxation: objective 6.000000e+00, 302 iterations, 0.00 seconds (0.00 work units)
+Root relaxation: objective 6.000000e+00, 258 iterations, 0.00 seconds (0.00 work units)
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0    6.00000    0   71          -    6.00000      -     -    0s
-     0     0    6.00000    0  349          -    6.00000      -     -    0s
-     0     0    6.00000    0  260          -    6.00000      -     -    0s
-     0     0    6.00000    0  323          -    6.00000      -     -    0s
-     0     0    6.00000    0   72          -    6.00000      -     -    0s
-     0     0    6.00000    0   72          -    6.00000      -     -    0s
-     0     0    6.00000    0   66          -    6.00000      -     -    0s
-     0     2    6.00000    0   66          -    6.00000      -     -    0s
-* 5128  1533             146      14.0000000    9.00000  35.7%  19.3    3s
-H 7132  1178                      13.0000000   10.00000  23.1%  17.6    3s
- 11779   396 infeasible   61        13.00000   12.00000  7.69%  15.6    5s
+     0     0    6.00000    0   55          -    6.00000      -     -    0s
+     0     0    6.00000    0  278          -    6.00000      -     -    0s
+     0     0    6.00000    0  190          -    6.00000      -     -    0s
+     0     0    6.00000    0  387          -    6.00000      -     -    0s
+     0     0    6.00000    0  115          -    6.00000      -     -    0s
+     0     0    6.00000    0  115          -    6.00000      -     -    0s
+     0     0    6.00000    0  112          -    6.00000      -     -    0s
+     0     2    6.00000    0  112          -    6.00000      -     -    0s
+H 1429   841                      14.0000000    7.00000  50.0%  20.8    1s
+H 1431   801                      13.0000000    7.00000  46.2%  20.8    2s
+  4308  1340 infeasible   47        13.00000    8.00000  38.5%  21.3    5s
+ 15265  1330 infeasible   55        13.00000   11.00000  15.4%  14.6   10s
 
 Cutting planes:
-  Learned: 4
+  Learned: 3
+  Gomory: 13
+  Cover: 16
+  Implied bound: 22
+  Projected implied bound: 9
+  Clique: 2
+  MIR: 38
+  StrongCG: 14
+  Flow cover: 69
+  GUB cover: 21
+  Inf proof: 2
+  Zero half: 14
+  Relax-and-lift: 32
 
-Explored 19031 nodes (264936 simplex iterations) in 6.51 seconds (3.59 work units)
+Explored 17572 nodes (277195 simplex iterations) in 12.64 seconds (6.22 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 2: 13 14 
@@ -69,6 +82,6 @@ Best objective 1.300000000000e+01, best bound 1.300000000000e+01, gap 0.0000%
 ! --------------------------------------------------------
 ! Status: OPTIMAL
 ! Best span = 13
-! Labeling: 7 3 10 2 5 4 4 8 11 10 1 13 2 5 1 11 12 7 4 11 9 2 3 6 9 8 5 8 12 1 
+! Labeling: 3 7 10 7 1 7 7 10 10 10 13 13 7 13 13 4 10 4 7 4 10 7 7 13 4 10 1 4 4 1 
 ! --------------------------------------------------------
 ! All verification passed
