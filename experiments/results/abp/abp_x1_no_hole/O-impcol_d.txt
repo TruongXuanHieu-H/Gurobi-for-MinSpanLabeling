@@ -1,0 +1,191 @@
+! Solving for graph /home/truongxuanhieu/Gurobi-for-MinSpanLabeling/benchmarks/abp/O-impcol_d.mtx.rnd
+! Target value is set to 120
+! Lower bound is set to 121
+! Upper bound is set to 425
+! Time limit is set to 1800
+! Vertices mode is set to No hole
+! Target value mode is set to Antibandwidth
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2663665
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Set parameter OutputFlag to value 1
+Set parameter TimeLimit to value 1800
+Gurobi Optimizer version 13.0.2 build v13.0.2rc1 (linux64 - "Debian GNU/Linux 12 (bookworm)")
+
+CPU model: Intel(R) Xeon(R) CPU @ 2.20GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  1800
+
+Academic license 2663665 - for non-commercial use only - registered to tu___@vnu.edu.vn
+Optimize a model with 3812 rows, 184010 columns and 548644 nonzeros (Min)
+Model fingerprint: 0x685813ae
+Model has 1 linear objective coefficients
+Model has 2117 simple general constraints
+  1267 ABS, 850 INDICATOR
+Variable types: 0 continuous, 184010 integer (181050 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 4e+02]
+  RHS range        [1e+00, 4e+02]
+  GenCon rhs range [1e+00, 1e+00]
+  GenCon coe range [1e+00, 1e+00]
+
+Presolve added 3807 rows and 2321 columns
+Presolve time: 2.66s
+Presolved: 7619 rows, 186331 columns, 559727 nonzeros
+Variable types: 0 continuous, 186331 integer (182104 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.16s
+
+Barrier statistics:
+ Dense cols : 1
+ AA' NZ     : 3.880e+05
+ Factor NZ  : 1.129e+06 (roughly 90 MB of memory)
+ Factor Ops : 5.163e+08 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.04610140e+03 -2.14449621e+05  1.47e+05 3.83e-02  8.06e+01     5s
+   1   2.33874631e+03 -2.03113490e+05  9.31e+04 1.86e-01  5.17e+01     5s
+   2   1.55331552e+03 -1.51221579e+05  6.40e+04 7.99e-15  3.54e+01     5s
+   3   2.39217684e+02 -1.09038076e+05  9.21e+01 4.53e-14  3.42e-01     5s
+   4   2.39734936e+02 -6.78057111e+03  3.64e+00 6.16e-15  2.01e-02     5s
+
+Barrier performed 4 iterations in 5.08 seconds (3.56 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 0.61s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3909    1.2100000e+02   0.000000e+00   0.000000e+00      5s
+
+Root relaxation: objective 1.210000e+02, 3909 iterations, 1.56 seconds (0.68 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  121.00000    0 1008          -  121.00000      -     -    6s
+     0     0  121.00000    0 1019          -  121.00000      -     -    7s
+     0     0  121.00000    0 2725          -  121.00000      -     -   18s
+     0     0  121.00000    0 2717          -  121.00000      -     -   18s
+     0     0  121.00000    0 3317          -  121.00000      -     -   20s
+     0     0  121.00000    0 3316          -  121.00000      -     -   20s
+     0     0  121.00000    0 3313          -  121.00000      -     -   28s
+     0     0  121.00000    0 2042          -  121.00000      -     -   32s
+     0     0  121.00000    0 3002          -  121.00000      -     -   35s
+     0     0  121.00000    0 3221          -  121.00000      -     -   41s
+     0     0  121.00000    0 3249          -  121.00000      -     -   41s
+     0     0  121.00000    0 2040          -  121.00000      -     -   45s
+     0     0  121.00000    0 2525          -  121.00000      -     -   49s
+     0     0  121.00000    0 2522          -  121.00000      -     -   49s
+     0     0  121.00000    0 3072          -  121.00000      -     -   55s
+     0     0  121.00000    0 3106          -  121.00000      -     -   55s
+     0     0  121.00000    0 1961          -  121.00000      -     -   59s
+     0     0  121.00000    0 1971          -  121.00000      -     -   62s
+     0     0  121.00000    0 1538          -  121.00000      -     -   65s
+     0     2  121.00000    0 1324          -  121.00000      -     -   81s
+    47    84  242.00000   11 2066          -  121.00000      -   341   85s
+   156   207  241.00000   29 2125          -  121.00000      -   199  104s
+   207   328  241.00000   38 2141          -  121.00000      -   174  121s
+   347   445  241.00000   60 2177          -  121.00000      -   129  139s
+   600   664 infeasible  149               -  121.00000      -  88.3  151s
+   861   861  257.00000  255 2141          -  121.00000      -  83.9  168s
+  1099   907  257.00000  356 2172          -  121.00000      -  79.0  186s
+  1149   924  257.00000  377 1842          -  121.00000      -  83.4  204s
+  1188   983  241.00000   29 2103          -  121.00000      -  84.7  222s
+  1260  1065  241.00000   38 2258          -  121.00000      -  85.1  240s
+  1346  1066  241.00000   88 1538          -  121.00000      -  89.0  257s
+  1348  1067  242.00000   78 1407          -  121.00000      -  88.8  276s
+  1349  1068  241.00000  209 2115          -  121.00000      -  88.8  297s
+  1350  1069  257.00000  304 3107          -  121.00000      -  88.7  310s
+  1351  1069  121.00000   17 1528          -  121.00000      -  88.6  330s
+  1352  1070  257.00000  335 1794          -  121.00000      -  88.6  342s
+  1353  1071  242.00000  107 1393          -  121.00000      -  88.5  351s
+  1354  1071  241.00000   83 2455          -  121.00000      -  88.4  362s
+  1355  1072  257.00000  232 2244          -  121.00000      -  88.4  380s
+  1356  1073  241.00000  207 2569          -  121.00000      -  88.3  402s
+  1357  1073  241.00000   78 1992          -  121.00000      -  88.2  415s
+  1358  1074  241.00000   41 1386          -  121.00000      -  88.2  423s
+  1359  1075  241.00000   10 1386          -  121.00000      -  88.1  445s
+  1360  1078  121.00000   10 1079          -  121.00000      -   261  450s
+  1362  1082  121.00000   11 1084          -  121.00000      -   261  513s
+  1370  1096  121.00000   13 1094          -  121.00000      -   262  555s
+  1403  1141  241.00000   18 2177          -  121.00000      -   264  560s
+  1443  1131  241.00000   23 2308          -  121.00000      -   268  572s
+  1446  1130 infeasible   24               -  121.00000      -   269  578s
+  1454  1185  121.00000   25 1057          -  121.00000      -   270  591s
+  1512  1168  121.00000   32 1073          -  121.00000      -   267  620s
+  1518  1257  121.00000   33 1045          -  121.00000      -   277  635s
+  1615  1278  241.00000   47 1882          -  121.00000      -   272  653s
+  1679  1260  241.00000   49 1947          -  121.00000      -   270  676s
+  1682  1354  241.00000   49 1971          -  121.00000      -   271  694s
+  1780  1336  361.00000   70 2677          -  121.00000      -   262  712s
+  1795  1335  361.00000   71 2481          -  121.00000      -   264  738s
+  1799  1456  361.00000   72 2630          -  121.00000      -   267  756s
+  1926  1443  361.00000   83 2621          -  121.00000      -   258  775s
+  1956  1438 infeasible   91               -  121.00000      -   256  814s
+  1971  1443  393.00000   87 3067          -  121.00000      -   260  828s
+  1985  1469  393.00000   88 2996          -  121.00000      -   265  863s
+  2074  1440  361.00000  102 2425          -  121.00000      -   276  911s
+  2078  1481 infeasible   75               -  121.00000      -   277  933s
+  2144  1520  138.00000   58 1222          -  121.00000      -   283  955s
+  2217  1490 infeasible   83               -  121.00000      -   285  998s
+  2227  1505  241.00000   55 1872          -  121.00000      -   290 1020s
+  2251  1493  241.00000   66 1692          -  121.00000      -   292 1042s
+  2261  1575  241.00000   67 1651          -  121.00000      -   295 1066s
+  2461  1503 infeasible  110               -  121.00000      -   279 1085s
+  2472  1532  241.00000   31 2220          -  121.00000      -   280 1105s
+  2615  1487  241.00000  101 2192          -  121.00000      -   266 1128s
+  2619  1501  241.00000  102 2192          -  121.00000      -   267 1146s
+  2640  1497  241.00000  103 1865          -  121.00000      -   265 1170s
+  2645  1601  241.00000  104 1863          -  121.00000      -   267 1189s
+  2866  1596  241.00000  173 1852          -  121.00000      -   248 1199s
+  3104  1670  241.00000  248 1836          -  121.00000      -   232 1217s
+  3336  1580 infeasible   44               -  121.00000      -   221 1236s
+  3355  1631  241.00000   44 2084          -  121.00000      -   222 1254s
+  3452  1598 infeasible   89               -  121.00000      -   216 1266s
+  3457  1790  241.00000   34 2223          -  121.00000      -   219 1285s
+  3784  1680  361.00000  133 2604          -  121.00000      -   203 1300s
+  3793  1792  241.00000  133 1993          -  121.00000      -   203 1310s
+  4204  1730  241.00000  157 1636          -  121.00000      -   187 1328s
+  4345  1673 infeasible  163               -  121.00000      -   186 1365s
+  4360  1691  241.00000   31 2166          -  121.00000      -   190 1470s
+  4387  1681  361.00000   39 2913          -  121.00000      -   192 1607s
+  4392  1897 infeasible   38               -  121.00000      -   196 1751s
+  4682  1821  361.00000  184 2526          -  121.00000      -   186 1800s
+
+Cutting planes:
+  Gomory: 3
+  Cover: 6
+  Implied bound: 10
+  MIR: 38
+  StrongCG: 17
+  Flow cover: 360
+  GUB cover: 7
+  Zero half: 2
+  Relax-and-lift: 67
+
+Explored 4696 nodes (998836 simplex iterations) in 1800.03 seconds (2338.23 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 0
+
+Time limit reached
+Best objective -, best bound 1.210000000000e+02, gap -
+! --------------------------------------------------------
+! Optimization failed
+! Status = 9
+! --------------------------------------------------------
